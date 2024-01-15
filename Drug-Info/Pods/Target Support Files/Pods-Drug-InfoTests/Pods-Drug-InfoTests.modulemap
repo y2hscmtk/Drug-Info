@@ -1,0 +1,6 @@
+framework module Pods_Drug_InfoTests {
+  umbrella header "Pods-Drug-InfoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -48,4 +48,3 @@ struct Body: Decodable {
     let items: [DrugItem]
 }
 
-
