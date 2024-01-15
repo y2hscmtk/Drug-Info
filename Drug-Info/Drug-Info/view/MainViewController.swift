@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         
         // nib 등록
+        tableView.register(UINib(nibName: "DrugTableViewCell", bundle: nil), forCellReuseIdentifier: DrugTableViewCell.identifier)
         
     }
     
@@ -35,11 +36,14 @@ class MainViewController: UIViewController {
 extension MainViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 10;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DrugTableViewCell.identifier, for: indexPath) as? DrugTableViewCell else {
+            return UITableViewCell()
+        }
+        return cell
     }
     
     

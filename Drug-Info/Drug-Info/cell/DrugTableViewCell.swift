@@ -8,6 +8,8 @@
 import UIKit
 
 class DrugTableViewCell: UITableViewCell {
+    
+    static let identifier = "DrugTableViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
