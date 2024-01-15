@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88092B55256400126ADB /* AppDelegate.swift */; };
+		29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880B2B55256400126ADB /* SceneDelegate.swift */; };
+		29EA880E2B55256400126ADB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880D2B55256400126ADB /* ViewController.swift */; };
+		29EA88112B55256400126ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EA880F2B55256400126ADB /* Main.storyboard */; };
+		29EA88132B55256500126ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EA88122B55256500126ADB /* Assets.xcassets */; };
+		29EA88162B55256500126ADB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EA88142B55256500126ADB /* LaunchScreen.storyboard */; };
+		29EA88212B55256500126ADB /* Drug_InfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88202B55256500126ADB /* Drug_InfoTests.swift */; };
+		29EA882B2B55256500126ADB /* Drug_InfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA882A2B55256500126ADB /* Drug_InfoUITests.swift */; };
+		29EA882D2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29EA881D2B55256500126ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29EA87FE2B55256400126ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29EA88052B55256400126ADB;
+			remoteInfo = "Drug-Info";
+		};
+		29EA88272B55256500126ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29EA87FE2B55256400126ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29EA88052B55256400126ADB;
+			remoteInfo = "Drug-Info";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29EA88062B55256400126ADB /* Drug-Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drug-Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EA88092B55256400126ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29EA880B2B55256400126ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		29EA880D2B55256400126ADB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29EA88102B55256400126ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29EA88122B55256500126ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29EA88152B55256500126ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29EA88172B55256500126ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29EA881C2B55256500126ADB /* Drug-InfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drug-InfoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EA88202B55256500126ADB /* Drug_InfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoTests.swift; sourceTree = "<group>"; };
+		29EA88262B55256500126ADB /* Drug-InfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drug-InfoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EA882A2B55256500126ADB /* Drug_InfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoUITests.swift; sourceTree = "<group>"; };
+		29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29EA88032B55256400126ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EA88192B55256500126ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EA88232B55256500126ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29EA87FD2B55256400126ADB = {
+			isa = PBXGroup;
+			children = (
+				29EA88082B55256400126ADB /* Drug-Info */,
+				29EA881F2B55256500126ADB /* Drug-InfoTests */,
+				29EA88292B55256500126ADB /* Drug-InfoUITests */,
+				29EA88072B55256400126ADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29EA88072B55256400126ADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29EA88062B55256400126ADB /* Drug-Info.app */,
+				29EA881C2B55256500126ADB /* Drug-InfoTests.xctest */,
+				29EA88262B55256500126ADB /* Drug-InfoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29EA88082B55256400126ADB /* Drug-Info */ = {
+			isa = PBXGroup;
+			children = (
+				29EA88092B55256400126ADB /* AppDelegate.swift */,
+				29EA880B2B55256400126ADB /* SceneDelegate.swift */,
+				29EA880D2B55256400126ADB /* ViewController.swift */,
+				29EA880F2B55256400126ADB /* Main.storyboard */,
+				29EA88122B55256500126ADB /* Assets.xcassets */,
+				29EA88142B55256500126ADB /* LaunchScreen.storyboard */,
+				29EA88172B55256500126ADB /* Info.plist */,
+			);
+			path = "Drug-Info";
+			sourceTree = "<group>";
+		};
+		29EA881F2B55256500126ADB /* Drug-InfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				29EA88202B55256500126ADB /* Drug_InfoTests.swift */,
+			);
+			path = "Drug-InfoTests";
+			sourceTree = "<group>";
+		};
+		29EA88292B55256500126ADB /* Drug-InfoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				29EA882A2B55256500126ADB /* Drug_InfoUITests.swift */,
+				29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */,
+			);
+			path = "Drug-InfoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29EA88052B55256400126ADB /* Drug-Info */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29EA88302B55256500126ADB /* Build configuration list for PBXNativeTarget "Drug-Info" */;
+			buildPhases = (
+				29EA88022B55256400126ADB /* Sources */,
+				29EA88032B55256400126ADB /* Frameworks */,
+				29EA88042B55256400126ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Drug-Info";
+			productName = "Drug-Info";
+			productReference = 29EA88062B55256400126ADB /* Drug-Info.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29EA881B2B55256500126ADB /* Drug-InfoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29EA88332B55256500126ADB /* Build configuration list for PBXNativeTarget "Drug-InfoTests" */;
+			buildPhases = (
+				29EA88182B55256500126ADB /* Sources */,
+				29EA88192B55256500126ADB /* Frameworks */,
+				29EA881A2B55256500126ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29EA881E2B55256500126ADB /* PBXTargetDependency */,
+			);
+			name = "Drug-InfoTests";
+			productName = "Drug-InfoTests";
+			productReference = 29EA881C2B55256500126ADB /* Drug-InfoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29EA88252B55256500126ADB /* Drug-InfoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29EA88362B55256500126ADB /* Build configuration list for PBXNativeTarget "Drug-InfoUITests" */;
+			buildPhases = (
+				29EA88222B55256500126ADB /* Sources */,
+				29EA88232B55256500126ADB /* Frameworks */,
+				29EA88242B55256500126ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29EA88282B55256500126ADB /* PBXTargetDependency */,
+			);
+			name = "Drug-InfoUITests";
+			productName = "Drug-InfoUITests";
+			productReference = 29EA88262B55256500126ADB /* Drug-InfoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29EA87FE2B55256400126ADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					29EA88052B55256400126ADB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					29EA881B2B55256500126ADB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 29EA88052B55256400126ADB;
+					};
+					29EA88252B55256500126ADB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 29EA88052B55256400126ADB;
+					};
+				};
+			};
+			buildConfigurationList = 29EA88012B55256400126ADB /* Build configuration list for PBXProject "Drug-Info" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29EA87FD2B55256400126ADB;
+			productRefGroup = 29EA88072B55256400126ADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29EA88052B55256400126ADB /* Drug-Info */,
+				29EA881B2B55256500126ADB /* Drug-InfoTests */,
+				29EA88252B55256500126ADB /* Drug-InfoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29EA88042B55256400126ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EA88162B55256500126ADB /* LaunchScreen.storyboard in Resources */,
+				29EA88132B55256500126ADB /* Assets.xcassets in Resources */,
+				29EA88112B55256400126ADB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EA881A2B55256500126ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EA88242B55256500126ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29EA88022B55256400126ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EA880E2B55256400126ADB /* ViewController.swift in Sources */,
+				29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */,
+				29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EA88182B55256500126ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EA88212B55256500126ADB /* Drug_InfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EA88222B55256500126ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EA882D2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift in Sources */,
+				29EA882B2B55256500126ADB /* Drug_InfoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29EA881E2B55256500126ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29EA88052B55256400126ADB /* Drug-Info */;
+			targetProxy = 29EA881D2B55256500126ADB /* PBXContainerItemProxy */;
+		};
+		29EA88282B55256500126ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29EA88052B55256400126ADB /* Drug-Info */;
+			targetProxy = 29EA88272B55256500126ADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29EA880F2B55256400126ADB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29EA88102B55256400126ADB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29EA88142B55256500126ADB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29EA88152B55256500126ADB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29EA882E2B55256500126ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29EA882F2B55256500126ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29EA88312B55256500126ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Drug-Info/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "choi6.Drug-Info";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29EA88322B55256500126ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Drug-Info/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "choi6.Drug-Info";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29EA88342B55256500126ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "choi6.Drug-InfoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drug-Info.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Drug-Info";
+			};
+			name = Debug;
+		};
+		29EA88352B55256500126ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "choi6.Drug-InfoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drug-Info.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Drug-Info";
+			};
+			name = Release;
+		};
+		29EA88372B55256500126ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "choi6.Drug-InfoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Drug-Info";
+			};
+			name = Debug;
+		};
+		29EA88382B55256500126ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "choi6.Drug-InfoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Drug-Info";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29EA88012B55256400126ADB /* Build configuration list for PBXProject "Drug-Info" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EA882E2B55256500126ADB /* Debug */,
+				29EA882F2B55256500126ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29EA88302B55256500126ADB /* Build configuration list for PBXNativeTarget "Drug-Info" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EA88312B55256500126ADB /* Debug */,
+				29EA88322B55256500126ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29EA88332B55256500126ADB /* Build configuration list for PBXNativeTarget "Drug-InfoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EA88342B55256500126ADB /* Debug */,
+				29EA88352B55256500126ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29EA88362B55256500126ADB /* Build configuration list for PBXNativeTarget "Drug-InfoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EA88372B55256500126ADB /* Debug */,
+				29EA88382B55256500126ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29EA87FE2B55256400126ADB /* Project object */;
+}
