@@ -18,6 +18,9 @@
 		29EA882D2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */; };
 		29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */; };
 		29EA883F2B554B8100126ADB /* DrugTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */; };
+		29EA88422B5555E300126ADB /* DrugItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88412B5555E300126ADB /* DrugItem.swift */; };
+		29EA88442B55560C00126ADB /* DrugAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88432B55560C00126ADB /* DrugAPI.swift */; };
+		29EA88462B5557D600126ADB /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88452B5557D600126ADB /* APIParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugTableViewCell.swift; sourceTree = "<group>"; };
 		29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugTableViewCell.xib; sourceTree = "<group>"; };
+		29EA88412B5555E300126ADB /* DrugItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugItem.swift; sourceTree = "<group>"; };
+		29EA88432B55560C00126ADB /* DrugAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugAPI.swift; sourceTree = "<group>"; };
+		29EA88452B5557D600126ADB /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 		29EA883A2B554A6300126ADB /* api */ = {
 			isa = PBXGroup;
 			children = (
+				29EA88412B5555E300126ADB /* DrugItem.swift */,
+				29EA88432B55560C00126ADB /* DrugAPI.swift */,
+				29EA88452B5557D600126ADB /* APIParameter.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -289,9 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29EA88442B55560C00126ADB /* DrugAPI.swift in Sources */,
 				29EA880E2B55256400126ADB /* MainViewController.swift in Sources */,
+				29EA88462B5557D600126ADB /* APIParameter.swift in Sources */,
 				29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */,
 				29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */,
+				29EA88422B5555E300126ADB /* DrugItem.swift in Sources */,
 				29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
