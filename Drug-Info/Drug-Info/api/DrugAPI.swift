@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 // 공공 데이터 포탈 : https://www.data.go.kr/data/15075057/openapi.do
 // "식품의약품안전처_의약품개요정보(e약은요)"
@@ -48,3 +49,25 @@ struct Body: Decodable {
     let items: [DrugItem]
 }
 
+// Alamofire를 활용하여 API코드 작성
+class DrugAPI{
+    static let shared = DrugAPI()
+    
+    let url = "https://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList"
+    
+    // 알약 검색 => 파라미터를 매개변수로 받아서 요청
+    func searchDrug(_ parameter : APIParameter){
+        AF.request(url, method: .get, parameters: parameter)
+            .validate()
+            .responseDecodable(of: DrugResponse.self) { response in
+                switch response.result {
+                case .success(let drugResponse):
+                    let searchResult = drugResponse.body.items
+                    // print("Drug Response: \(drugResponse)")
+                    print("DrugInfo List : \(searchResult)")
+                case .failure(let error):
+                    print("API 요청 실패: \(error.localizedDescription)")
+                }
+            }
+    }
+}
