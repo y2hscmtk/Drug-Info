@@ -16,6 +16,8 @@
 		29EA88212B55256500126ADB /* Drug_InfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88202B55256500126ADB /* Drug_InfoTests.swift */; };
 		29EA882B2B55256500126ADB /* Drug_InfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA882A2B55256500126ADB /* Drug_InfoUITests.swift */; };
 		29EA882D2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */; };
+		29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */; };
+		29EA883F2B554B8100126ADB /* DrugTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		29EA88262B55256500126ADB /* Drug-InfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drug-InfoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EA882A2B55256500126ADB /* Drug_InfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoUITests.swift; sourceTree = "<group>"; };
 		29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugTableViewCell.swift; sourceTree = "<group>"; };
+		29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,14 @@
 		29EA88082B55256400126ADB /* Drug-Info */ = {
 			isa = PBXGroup;
 			children = (
+				29EA883B2B554A6700126ADB /* cell */,
+				29EA883A2B554A6300126ADB /* api */,
+				29EA88392B554A5A00126ADB /* view */,
 				29EA88092B55256400126ADB /* AppDelegate.swift */,
 				29EA880B2B55256400126ADB /* SceneDelegate.swift */,
-				29EA880D2B55256400126ADB /* MainViewController.swift */,
 				29EA880F2B55256400126ADB /* Main.storyboard */,
-				29EA88122B55256500126ADB /* Assets.xcassets */,
 				29EA88142B55256500126ADB /* LaunchScreen.storyboard */,
+				29EA88122B55256500126ADB /* Assets.xcassets */,
 				29EA88172B55256500126ADB /* Info.plist */,
 			);
 			path = "Drug-Info";
@@ -125,6 +131,30 @@
 				29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */,
 			);
 			path = "Drug-InfoUITests";
+			sourceTree = "<group>";
+		};
+		29EA88392B554A5A00126ADB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				29EA880D2B55256400126ADB /* MainViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		29EA883A2B554A6300126ADB /* api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		29EA883B2B554A6700126ADB /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */,
+				29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +264,7 @@
 				29EA88162B55256500126ADB /* LaunchScreen.storyboard in Resources */,
 				29EA88132B55256500126ADB /* Assets.xcassets in Resources */,
 				29EA88112B55256400126ADB /* Main.storyboard in Resources */,
+				29EA883F2B554B8100126ADB /* DrugTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +292,7 @@
 				29EA880E2B55256400126ADB /* MainViewController.swift in Sources */,
 				29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */,
 				29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */,
+				29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
