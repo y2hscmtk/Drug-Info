@@ -10,7 +10,11 @@ import UIKit
 class DrugTableViewCell: UITableViewCell {
     
     static let identifier = "DrugTableViewCell"
-
+    
+    @IBOutlet weak var drugImage: UIImageView!
+    @IBOutlet weak var drugName: UILabel!
+    @IBOutlet weak var company: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -56,15 +56,14 @@ class DrugAPI{
     let url = "https://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList"
     
     // 알약 검색 => 파라미터를 매개변수로 받아서 요청
-    func searchDrug(_ parameter : APIParameter){
+    func searchDrug(_ parameter : APIParameter, _ view : MainViewController){
         AF.request(url, method: .get, parameters: parameter)
             .validate()
             .responseDecodable(of: DrugResponse.self) { response in
                 switch response.result {
                 case .success(let drugResponse):
                     let searchResult = drugResponse.body.items
-                    // print("Drug Response: \(drugResponse)")
-                    print("DrugInfo List : \(searchResult)")
+                    view.setSearchResultArray(searchResult: searchResult)
                 case .failure(let error):
                     print("API 요청 실패: \(error.localizedDescription)")
                 }
