@@ -51,7 +51,7 @@
             <connections>
                 <outlet property="company" destination="X72-Hf-Lxz" id="B1z-Rv-K28"/>
                 <outlet property="drugImage" destination="KML-TI-L8b" id="yPE-gM-gUJ"/>
-                <outlet property="drugName" destination="X72-Hf-Lxz" id="dBf-6f-HtB"/>
+                <outlet property="drugName" destination="JMn-Bg-8Fl" id="DDj-dm-Y3l"/>
             </connections>
             <point key="canvasLocation" x="17.557251908396946" y="-20.422535211267608"/>
         </tableViewCell>

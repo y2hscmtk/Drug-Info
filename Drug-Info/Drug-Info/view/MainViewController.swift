@@ -72,9 +72,9 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
         }
         // 셀을 찾는데 성공하였다면
         let drug = searchResult[indexPath.row]
-        
+        print("drugName : \(drug.itemName)")
         // 셀에 필요한 데이터 주입
-        cell.drugName.text = drug.itemName // 이름
+        cell.drugName.text = drug.itemName
         cell.company.text = drug.entpName // 제조사 이름
         
         return cell
