@@ -27,6 +27,22 @@ class MainViewController: UIViewController {
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 네비게이션 바 숨기기
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 다른 뷰로 이동할 때 네비게이션 바를 다시 보이게 설정
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
     // tableview init
     func setTableView(){
         tableView.delegate = self
@@ -74,10 +90,24 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
         let drug = searchResult[indexPath.row]
         print("drugName : \(drug.itemName)")
         // 셀에 필요한 데이터 주입
-        cell.drugName.text = drug.itemName
+        cell.drugName.text = drug.itemName // 알약 이름
         cell.company.text = drug.entpName // 제조사 이름
         
+        // 셀 선택 효과 없애기(회색배경)
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        
         return cell
+    }
+    
+    // 알약 탭 클릭시 이벤트 정의
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // 이동할 화면 찾기
+        let drugInfoView = storyboard.instantiateViewController(
+            identifier: "DrugInfoViewController") as! DrugInfoViewController
+        
+        // 화면 이동
+        navigationController?.pushViewController(drugInfoView, animated: true)
     }
     
     
