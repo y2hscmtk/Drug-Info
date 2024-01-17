@@ -22,6 +22,7 @@
 		29EA88442B55560C00126ADB /* DrugAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88432B55560C00126ADB /* DrugAPI.swift */; };
 		29EA88462B5557D600126ADB /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88452B5557D600126ADB /* APIParameter.swift */; };
 		29EA88482B56633400126ADB /* DrugInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88472B56633400126ADB /* DrugInfoViewController.swift */; };
+		29EA884B2B579C4300126ADB /* +UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA884A2B579C4300126ADB /* +UIImageView.swift */; };
 		C46C4FB4DF21744D753D732A /* Pods_Drug_Info_Drug_InfoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A03DFC9249C1EC5E2A579C5 /* Pods_Drug_Info_Drug_InfoUITests.framework */; };
 		DD8AFD22D8C24AAA28C4D1F4 /* Pods_Drug_Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5225B60B6F4D193C8C75155D /* Pods_Drug_Info.framework */; };
 		F2FF9A4AF21019E92DFB3022 /* Pods_Drug_InfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042CAF8A2D628232758B3085 /* Pods_Drug_InfoTests.framework */; };
@@ -67,6 +68,7 @@
 		29EA88432B55560C00126ADB /* DrugAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugAPI.swift; sourceTree = "<group>"; };
 		29EA88452B5557D600126ADB /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 		29EA88472B56633400126ADB /* DrugInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInfoViewController.swift; sourceTree = "<group>"; };
+		29EA884A2B579C4300126ADB /* +UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIImageView.swift"; sourceTree = "<group>"; };
 		5225B60B6F4D193C8C75155D /* Pods_Drug_Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drug_Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570207AC79C7CED557C6F2AB /* Pods-Drug-Info-Drug-InfoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drug-Info-Drug-InfoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Drug-Info-Drug-InfoUITests/Pods-Drug-Info-Drug-InfoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0944A9CA8E01B50A30666E /* Pods-Drug-Info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drug-Info.release.xcconfig"; path = "Target Support Files/Pods-Drug-Info/Pods-Drug-Info.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		29EA88082B55256400126ADB /* Drug-Info */ = {
 			isa = PBXGroup;
 			children = (
+				29EA88492B579C3100126ADB /* extenstion */,
 				29EA883B2B554A6700126ADB /* cell */,
 				29EA883A2B554A6300126ADB /* api */,
 				29EA88392B554A5A00126ADB /* view */,
@@ -184,6 +187,14 @@
 				29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		29EA88492B579C3100126ADB /* extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				29EA884A2B579C4300126ADB /* +UIImageView.swift */,
+			);
+			path = extenstion;
 			sourceTree = "<group>";
 		};
 		2CD62BEA6ED215ABE212EE29 /* Frameworks */ = {
@@ -457,6 +468,7 @@
 				29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */,
 				29EA88422B5555E300126ADB /* DrugItem.swift in Sources */,
 				29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */,
+				29EA884B2B579C4300126ADB /* +UIImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
