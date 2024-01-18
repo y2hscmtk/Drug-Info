@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        btnSearch.layer.cornerRadius = 10
         setTableView()
         
     }
@@ -93,6 +94,11 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
         cell.drugName.text = drug.itemName // 알약 이름
         cell.company.text = drug.entpName // 제조사 이름
         
+        // 이미지 설정하는 로직 작성
+        if let link = drug.itemImage{
+            cell.drugImage.imageDownload(link: link)
+        }
+        
         // 셀 선택 효과 없애기(회색배경)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
@@ -105,6 +111,11 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
         // 이동할 화면 찾기
         let drugInfoView = storyboard.instantiateViewController(
             identifier: "DrugInfoViewController") as! DrugInfoViewController
+        
+        // 알약 정보 삽입
+        let drug = searchResult[indexPath.row]
+        // drugInfoView에 데이터 전달
+        drugInfoView.drug = drug
         
         // 화면 이동
         navigationController?.pushViewController(drugInfoView, animated: true)
