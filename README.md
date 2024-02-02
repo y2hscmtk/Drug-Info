@@ -7,9 +7,9 @@
 https://github.com/y2hscmtk/Drug-Info/assets/109474668/8fec8510-8497-4ec1-b64a-177871c38d2d
 
 <p float="left">
-  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/8ba13a94-4766-4f7b-ae52-d229cf0f2474" width="300"/>
-  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/b4c472bb-e2e0-4b3b-8338-3b6fbe6c344b" width="300"/>
-  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/ae6c9a14-0eb3-46b5-bbbc-e9c64e28cac8" width="300"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/8ba13a94-4766-4f7b-ae52-d229cf0f2474" width="200"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/b4c472bb-e2e0-4b3b-8338-3b6fbe6c344b" width="200"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/ae6c9a14-0eb3-46b5-bbbc-e9c64e28cac8" width="200"/>
 </p>
 
 
