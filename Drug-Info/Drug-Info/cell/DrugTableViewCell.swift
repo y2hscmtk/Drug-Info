@@ -18,6 +18,10 @@ class DrugTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        // 테두리 둥글게 설정
+        drugImage.layer.cornerRadius = 10
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
