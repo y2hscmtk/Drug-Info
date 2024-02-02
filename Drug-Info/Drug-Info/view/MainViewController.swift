@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btnSearch: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var activityIndicator: UIActivityIndicatorView! // 검색결과를 기다리는 동안 띄울 로딩창
+    
     // 검색 결과 알약 데이터
     var searchResult : [DrugItem] = []{
         didSet {
@@ -25,6 +27,11 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         btnSearch.layer.cornerRadius = 10
         setTableView()
+        
+        // 인디케이터 초기화 및 설정
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = self.view.center
+        self.view.addSubview(activityIndicator)
         
     }
     
@@ -58,6 +65,9 @@ class MainViewController: UIViewController {
     @IBAction func btnSearchDidTapped(_ sender: Any) {
         // 검색필드가 비어있는지 아닌지 검사
         if(searchTextFiled.text != ""){
+            // 인디케이터 시작
+            activityIndicator.startAnimating()
+            
             searchResult = [] // 이전 검색결과를 비운다(로딩 창을 띄우는동안 아무것도 보이지 않도록)
             // API로부터 데이터 요청
             let parameter = APIParameter(efcyQesitm: searchTextFiled.text!)
@@ -74,6 +84,9 @@ class MainViewController: UIViewController {
 extension MainViewController {
     func setSearchResultArray(searchResult : [DrugItem]){
         self.searchResult = searchResult
+        
+        // 인디케이터 정지
+        activityIndicator.stopAnimating()
     }
 }
 
