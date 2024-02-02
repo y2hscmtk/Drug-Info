@@ -1,4 +1,5 @@
 # 이게뭐약?(Drug-Info)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fy2hscmtk%2FDrug-Info&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 이게뭐약?은 API통신 연습을 위한 사이드 프로젝트입니다.
 
