@@ -15,6 +15,7 @@ https://github.com/y2hscmtk/Drug-Info/assets/109474668/8fec8510-8497-4ec1-b64a-1
 
 > [!IMPORTANT]
 > 어플리케이션을 실행하기 전, Secrets.plist파일을 생성한뒤 API키를 발급받아 등록하여야합니다.
+
 ![image](https://github.com/y2hscmtk/Drug-Info/assets/109474668/68d34042-84a0-4c66-a9bf-6ffe1baffccb)
 ![image](https://github.com/y2hscmtk/Drug-Info/assets/109474668/edeb6ae3-58c0-4602-a1ce-36b479de6aa4)
 ![image](https://github.com/y2hscmtk/Drug-Info/assets/109474668/c551466e-d92f-4474-b8b4-b140e953a8d3)
