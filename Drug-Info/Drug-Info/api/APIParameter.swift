@@ -4,8 +4,10 @@
 //
 //  Created by Choi76 on 2024/01/15.
 //
+
+import Foundation
 struct APIParameter : Encodable{
-    let ServiceKey = "mnM3G+Ve2TbLbL8c28uo0+8DPm1BWhypecdlULvO0JON8yo7ml/Crna3jiAd5vo9sM2U67ohzK8DWVt5xdPBnA==" // decoding
+    let ServiceKey = Bundle.main.apiKey // Secrets.plist 파일로부터 공공데이터포탈 api키 로드
     var pageNo : Int = 1
     var numOfRows : Int = 10 // 얻어올 결과값 개수
     var efcyQesitm : String
@@ -15,4 +17,19 @@ struct APIParameter : Encodable{
         self.numOfRows = numOfRows
         self.efcyQesitm = efcyQesitm
     }
+}
+
+// api키 숨김 처리를 위한 Bundle 확장
+extension Bundle {
+    
+    var apiKey: String? {
+        guard let file = self.path(forResource: "Secrets", ofType: "plist"),
+              let resource = NSDictionary(contentsOfFile: file),
+              let key = resource["API_KEY"] as? String else {
+            print("Fail To Load API KEY")
+            return nil
+        }
+        return key
+    }
+    
 }
