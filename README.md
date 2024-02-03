@@ -5,7 +5,9 @@
 
 공공데이터 포탈 오픈API [식품의약품안전처_의약품개요정보(e약은요)](https://www.data.go.kr/data/15075057/openapi.do)를 활용하여 제작하였습니다.
 
-https://github.com/y2hscmtk/Drug-Info/assets/109474668/8fec8510-8497-4ec1-b64a-177871c38d2d
+
+https://github.com/y2hscmtk/Drug-Info/assets/109474668/7b27c2de-f8b9-4c32-94ff-6b5ec28bdd77
+
 
 <p float="left">
   <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/8ba13a94-4766-4f7b-ae52-d229cf0f2474" width="200"/>
