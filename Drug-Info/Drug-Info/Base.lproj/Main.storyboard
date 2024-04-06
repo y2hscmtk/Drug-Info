@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -241,18 +242,67 @@
         <!--나의 알약-->
         <scene sceneID="vPe-HL-mgW">
             <objects>
-                <viewController id="KEW-fj-9wa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyDrugViewController" id="KEW-fj-9wa" customClass="MyDrugViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZBm-It-7Gv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medicine_cabinet" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-fA-j0N">
+                                <rect key="frame" x="15" y="74" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5Td-GH-x9H"/>
+                                    <constraint firstAttribute="height" constant="40" id="nwL-5U-qrU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 알약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-6I-bPF">
+                                <rect key="frame" x="60" y="74" width="103" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" red="0.58039218189999997" green="0.83137255909999996" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-Bl-AzK">
+                                <rect key="frame" x="15" y="124" width="363" height="635"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sqG-rF-bUt">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k00-Da-NCe">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UGd-9a-Oid">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T0L-mk-Rt6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SHA-6I-bPF" firstAttribute="top" secondItem="T0L-mk-Rt6" secondAttribute="top" constant="15" id="3QZ-Bq-hsa"/>
+                            <constraint firstItem="SHA-6I-bPF" firstAttribute="leading" secondItem="bCy-fA-j0N" secondAttribute="trailing" constant="5" id="91E-MS-ZEB"/>
+                            <constraint firstItem="SHA-6I-bPF" firstAttribute="centerY" secondItem="bCy-fA-j0N" secondAttribute="centerY" id="PC3-cT-PfL"/>
+                            <constraint firstItem="T0L-mk-Rt6" firstAttribute="bottom" secondItem="sWa-Bl-AzK" secondAttribute="bottom" constant="10" id="PzO-QN-pXN"/>
+                            <constraint firstItem="bCy-fA-j0N" firstAttribute="leading" secondItem="T0L-mk-Rt6" secondAttribute="leading" constant="15" id="Q6E-hX-2OS"/>
+                            <constraint firstItem="sWa-Bl-AzK" firstAttribute="leading" secondItem="T0L-mk-Rt6" secondAttribute="leading" constant="15" id="dS6-y7-RPw"/>
+                            <constraint firstItem="bCy-fA-j0N" firstAttribute="top" secondItem="T0L-mk-Rt6" secondAttribute="top" constant="15" id="hIi-A9-j4m"/>
+                            <constraint firstItem="T0L-mk-Rt6" firstAttribute="trailing" secondItem="sWa-Bl-AzK" secondAttribute="trailing" constant="15" id="svF-2t-Jgg"/>
+                            <constraint firstItem="sWa-Bl-AzK" firstAttribute="top" secondItem="bCy-fA-j0N" secondAttribute="bottom" constant="10" id="vsE-to-x5k"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="나의 알약" image="medicine_cabinet" id="Pwx-Qi-COn"/>
+                    <connections>
+                        <outlet property="collectionview" destination="sWa-Bl-AzK" id="d7I-xF-O0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-bC-Lyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344" y="708"/>
+            <point key="canvasLocation" x="1342.7480916030534" y="707.74647887323943"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kpq-kY-zUe">

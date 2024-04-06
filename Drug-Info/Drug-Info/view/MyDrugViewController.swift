@@ -9,21 +9,31 @@ import UIKit
 
 class MyDrugViewController: UIViewController {
 
+    
+    @IBOutlet weak var collectionview: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//
+//        collectionview.dataSource = self
+//        collectionview.delegate = self
+        // 사용할 셀 등록
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+//extension MyDrugViewController: UICollectionViewDataSource,UICollectionViewDelegate{
+//    
+//    // 몇개의 셀을 보여줄 것인지
+//    // 현재 사용자가 저장해둔 약의 개수만큼
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        5
+//    }
+//    
+//    // 보여줄 셀의 모습 정의
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//    }
+//    
+//    
+//}
