@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2998A5662B6C827D004DF521 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2998A5652B6C827D004DF521 /* Secrets.plist */; };
+		29924B732BC15824002B47F5 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29924B722BC15824002B47F5 /* Secrets.plist */; };
+		29924B752BC158F8002B47F5 /* MyDrugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B742BC158F8002B47F5 /* MyDrugViewController.swift */; };
 		29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88092B55256400126ADB /* AppDelegate.swift */; };
 		29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880B2B55256400126ADB /* SceneDelegate.swift */; };
 		29EA880E2B55256400126ADB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880D2B55256400126ADB /* MainViewController.swift */; };
@@ -50,7 +51,8 @@
 		042CAF8A2D628232758B3085 /* Pods_Drug_InfoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drug_InfoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A03DFC9249C1EC5E2A579C5 /* Pods_Drug_Info_Drug_InfoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drug_Info_Drug_InfoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291205EA49FC3B23D315E0C0 /* Pods-Drug-Info-Drug-InfoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drug-Info-Drug-InfoUITests.release.xcconfig"; path = "Target Support Files/Pods-Drug-Info-Drug-InfoUITests/Pods-Drug-Info-Drug-InfoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2998A5652B6C827D004DF521 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		29924B722BC15824002B47F5 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		29924B742BC158F8002B47F5 /* MyDrugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugViewController.swift; sourceTree = "<group>"; };
 		29EA88062B55256400126ADB /* Drug-Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drug-Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EA88092B55256400126ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29EA880B2B55256400126ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		29EA87FD2B55256400126ADB = {
 			isa = PBXGroup;
 			children = (
+				29924B722BC15824002B47F5 /* Secrets.plist */,
 				29EA88082B55256400126ADB /* Drug-Info */,
 				29EA881F2B55256500126ADB /* Drug-InfoTests */,
 				29EA88292B55256500126ADB /* Drug-InfoUITests */,
@@ -142,7 +145,6 @@
 				29EA88142B55256500126ADB /* LaunchScreen.storyboard */,
 				29EA88122B55256500126ADB /* Assets.xcassets */,
 				29EA88172B55256500126ADB /* Info.plist */,
-				2998A5652B6C827D004DF521 /* Secrets.plist */,
 			);
 			path = "Drug-Info";
 			sourceTree = "<group>";
@@ -169,6 +171,7 @@
 			children = (
 				29EA880D2B55256400126ADB /* MainViewController.swift */,
 				29EA88472B56633400126ADB /* DrugInfoViewController.swift */,
+				29924B742BC158F8002B47F5 /* MyDrugViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -333,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29EA88162B55256500126ADB /* LaunchScreen.storyboard in Resources */,
-				2998A5662B6C827D004DF521 /* Secrets.plist in Resources */,
+				29924B732BC15824002B47F5 /* Secrets.plist in Resources */,
 				29EA88132B55256500126ADB /* Assets.xcassets in Resources */,
 				29EA88112B55256400126ADB /* Main.storyboard in Resources */,
 				29EA883F2B554B8100126ADB /* DrugTableViewCell.xib in Resources */,
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29924B752BC158F8002B47F5 /* MyDrugViewController.swift in Sources */,
 				29EA88442B55560C00126ADB /* DrugAPI.swift in Sources */,
 				29EA880E2B55256400126ADB /* MainViewController.swift in Sources */,
 				29EA88462B5557D600126ADB /* APIParameter.swift in Sources */,
