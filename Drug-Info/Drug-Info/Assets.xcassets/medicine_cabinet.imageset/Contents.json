@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icon_drug.png",
+      "filename" : "medicine_cabinet.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icon_drug 1.png",
+      "filename" : "medicine_cabinet 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icon_drug 2.png",
+      "filename" : "medicine_cabinet 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

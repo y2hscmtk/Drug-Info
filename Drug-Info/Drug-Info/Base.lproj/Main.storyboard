@@ -219,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="2849.6183206106871" y="0.70422535211267612"/>
         </scene>
-        <!--Item-->
+        <!--알약 검색-->
         <scene sceneID="4RM-kC-34g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6JC-vb-fWZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9f5-vu-7jy"/>
+                    <tabBarItem key="tabBarItem" title="알약 검색" image="icon_drug" id="9f5-vu-7jy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="brz-nX-geZ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="1344.2748091603053" y="0.70422535211267612"/>
         </scene>
-        <!--Item-->
+        <!--나의 알약-->
         <scene sceneID="vPe-HL-mgW">
             <objects>
                 <viewController id="KEW-fj-9wa" sceneMemberID="viewController">
@@ -248,7 +248,7 @@
                         <viewLayoutGuide key="safeArea" id="T0L-mk-Rt6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Pwx-Qi-COn"/>
+                    <tabBarItem key="tabBarItem" title="나의 알약" image="medicine_cabinet" id="Pwx-Qi-COn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-bC-Lyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,6 +262,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIj-5V-akd">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.58039218189999997" green="0.83137255909999996" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.58039218189999997" green="0.83137255909999996" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="6JC-vb-fWZ" kind="relationship" relationship="viewControllers" id="xID-e6-OKK"/>
@@ -275,6 +277,7 @@
     </scenes>
     <resources>
         <image name="icon_drug" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="medicine_cabinet" width="21.333333969116211" height="21.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
