@@ -7,10 +7,18 @@
 
 // API로부터 전달받을 알약 클래스
 struct DrugItem: Decodable {
-    let itemImage: String? // 알약 이미지 링크 (옵셔널)
-    let itemName: String // 알약 이름
-    let entpName: String // 알약 제조사
-    let efcyQesitm: String? // 알약 효능 요약 (옵셔널)
-    let useMethodQesitm: String? // 복용 방법 (옵셔널)
-    let depositMethodQesitm: String? // 보관 방법 (옵셔널)
+    var entpName : String? // 알약 제조사
+    var itemName : String? // 알약 이름
+    var itemSeq : String?
+    var efcyQesitm : String? // 알약 효능 요약
+    var useMethodQesitm : String? // 복용 방법
+    var atpnWarnQesitm : String?
+    var atpnQesitm : String?
+    var intrcQesitm : String?
+    var seQesitm : String?
+    var depositMethodQesitm : String? // 보관 방법
+    var openDe : String?
+    var updateDe : String?
+    var itemImage : String? // 알약 이미지 링크
+    var bizrno : String?
 }

@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView! // 검색결과를 기다리는 동안 띄울 로딩창
     
+    var serviceKey : String? // API요청을 위한 서비스키
+    
     // 검색 결과 알약 데이터
     var searchResult : [DrugItem] = []{
         didSet {
@@ -24,7 +26,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // 서비스 키 로드
+        let secrets = MainViewController.load("Secrets")
+        serviceKey = secrets["API_KEY"]
+        
         btnSearch.layer.cornerRadius = 10
         setTableView()
         
@@ -70,7 +75,7 @@ class MainViewController: UIViewController {
             
             searchResult = [] // 이전 검색결과를 비운다(로딩 창을 띄우는동안 아무것도 보이지 않도록)
             // API로부터 데이터 요청
-            let parameter = APIParameter(efcyQesitm: searchTextFiled.text!)
+            let parameter = APIParameter(ServiceKey: "2WViM7iz3KBbjBYg1Sdx/1CyuPVh6hYyTUlXTUtquW8ioxx5MXpxy4mC9NXfLpZ2P5HeShlohQLOA8xGVeSZ0Q==", efcyQesitm: searchTextFiled.text!)
             print("paramete : \(parameter)")
             DrugAPI.shared.searchDrug(parameter,self)
         } else {
@@ -102,7 +107,7 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
         }
         // 셀을 찾는데 성공하였다면
         let drug = searchResult[indexPath.row]
-        print("drugName : \(drug.itemName)")
+        print("drugName : \(String(describing: drug.itemName))")
         // 셀에 필요한 데이터 주입
         cell.drugName.text = drug.itemName // 알약 이름
         cell.company.text = drug.entpName // 제조사 이름
@@ -137,3 +142,14 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
     
 }
 
+extension MainViewController {
+    static func load(_ filename: String) -> [String: String] {
+        let decoder = JSONDecoder()
+        guard let url = Bundle.main.url(forResource: filename, withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let result = try? decoder.decode([String: String].self, from: data) else {
+            fatalError("Failed to load \(filename) from bundle.")
+        }
+        return result
+    }
+}
