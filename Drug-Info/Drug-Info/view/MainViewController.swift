@@ -77,22 +77,19 @@ class MainViewController: UIViewController {
             // API로부터 데이터 요청
             let parameter = APIParameter(ServiceKey: serviceKey!, efcyQesitm: searchTextFiled.text!)
             print("paramete : \(parameter)")
-            DrugAPI.shared.searchDrug(parameter,self)
+            DrugAPI.shared.searchDrug(parameter){ isSuccess, searchResult in
+                if isSuccess {
+                    self.searchResult = searchResult
+                } else {
+                    // 오류 처리 필요
+                }
+                self.activityIndicator.stopAnimating()
+            }
         } else {
             print("내용이 비었습니다.")
         }
     }
     
-}
-
-// DrugAPI에서 데이터를 전달 받기 위함
-extension MainViewController {
-    func setSearchResultArray(searchResult : [DrugItem]){
-        self.searchResult = searchResult
-        
-        // 인디케이터 정지
-        activityIndicator.stopAnimating()
-    }
 }
 
 extension MainViewController : UITableViewDataSource, UITableViewDelegate{

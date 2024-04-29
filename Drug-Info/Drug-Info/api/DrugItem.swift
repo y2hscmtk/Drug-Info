@@ -5,6 +5,27 @@
 //  Created by Choi76 on 2024/01/15.
 //
 
+// header, body
+struct DrugResponse: Decodable {
+    var header: Header?
+    var body: Body?
+}
+
+// header
+struct Header: Decodable {
+    var resultCode: String?
+    var resultMsg: String?
+}
+
+// body
+// 일치하는 알약 결과값이 여러개 존재할 경우, 배열의 형태로 전달받음
+struct Body: Decodable {
+    var pageNo: Int?
+    var totalCount: Int?
+    var numOfRows: Int?
+    var items: [DrugItem]
+}
+
 // API로부터 전달받을 알약 클래스
 struct DrugItem: Decodable {
     var entpName : String? // 알약 제조사
