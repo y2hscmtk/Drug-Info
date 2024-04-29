@@ -21,9 +21,9 @@ https://github.com/y2hscmtk/Drug-Info/assets/109474668/7b27c2de-f8b9-4c32-94ff-6
 
 <img width="729" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/c7d4f5a1-87e2-4aa0-b38c-f7c19927a6ac">
 <img width="731" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/8d458f3b-3373-4097-b7e5-96adb485d927">
-<img width="561" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/a8661aba-28f5-45b2-8424-51c47961c2df">
+<img width="561" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/a8661aba-28f5-45b2-8424-51c47961c2df">  
 
-API키는 Decode키를 등록해야 합니다.
+API키는 Decode키를 등록해야 합니다.  
 <img width="516" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/dffd8f26-95f1-4254-bf84-c255e1a82e28">
 
 
