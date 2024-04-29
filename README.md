@@ -17,9 +17,14 @@ https://github.com/y2hscmtk/Drug-Info/assets/109474668/7b27c2de-f8b9-4c32-94ff-6
 
 
 > [!IMPORTANT]
-> 어플리케이션을 실행하기 전, Secrets.plist파일을 생성한뒤 API키를 발급받아 등록하여야합니다.
+> 어플리케이션을 실행하기 전, Secrets.json파일을 생성한뒤 API키를 발급받아 등록하여야합니다.
 
-![image](https://github.com/y2hscmtk/Drug-Info/assets/109474668/68d34042-84a0-4c66-a9bf-6ffe1baffccb)
-![image](https://github.com/y2hscmtk/Drug-Info/assets/109474668/edeb6ae3-58c0-4602-a1ce-36b479de6aa4)
-![image](https://github.com/y2hscmtk/Drug-Info/assets/109474668/c551466e-d92f-4474-b8b4-b140e953a8d3)
+<img width="729" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/c7d4f5a1-87e2-4aa0-b38c-f7c19927a6ac">
+<img width="731" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/8d458f3b-3373-4097-b7e5-96adb485d927">
+<img width="561" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/a8661aba-28f5-45b2-8424-51c47961c2df">
+
+API키는 Decode키를 등록해야 합니다.
+<img width="516" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/dffd8f26-95f1-4254-bf84-c255e1a82e28">
+
+
 
