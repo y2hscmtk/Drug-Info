@@ -75,7 +75,7 @@ class MainViewController: UIViewController {
             
             searchResult = [] // 이전 검색결과를 비운다(로딩 창을 띄우는동안 아무것도 보이지 않도록)
             // API로부터 데이터 요청
-            let parameter = APIParameter(ServiceKey: "2WViM7iz3KBbjBYg1Sdx/1CyuPVh6hYyTUlXTUtquW8ioxx5MXpxy4mC9NXfLpZ2P5HeShlohQLOA8xGVeSZ0Q==", efcyQesitm: searchTextFiled.text!)
+            let parameter = APIParameter(ServiceKey: serviceKey!, efcyQesitm: searchTextFiled.text!)
             print("paramete : \(parameter)")
             DrugAPI.shared.searchDrug(parameter,self)
         } else {
