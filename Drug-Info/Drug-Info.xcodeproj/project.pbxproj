@@ -11,6 +11,24 @@
 		29924B752BC158F8002B47F5 /* MyDrugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B742BC158F8002B47F5 /* MyDrugViewController.swift */; };
 		29924B782BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */; };
 		29924B792BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */; };
+		29CF55042BECFBF100E27B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29CF55032BECFBF100E27B46 /* GoogleService-Info.plist */; };
+		29CF55072BECFC4100E27B46 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55062BECFC4100E27B46 /* FirebaseAnalytics */; };
+		29CF55092BECFC4100E27B46 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55082BECFC4100E27B46 /* FirebaseAnalyticsOnDeviceConversion */; };
+		29CF550B2BECFC4100E27B46 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF550A2BECFC4100E27B46 /* FirebaseAnalyticsSwift */; };
+		29CF550D2BECFC4100E27B46 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF550C2BECFC4100E27B46 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		29CF550F2BECFC4100E27B46 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF550E2BECFC4100E27B46 /* FirebaseAppCheck */; };
+		29CF55112BECFC4100E27B46 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55102BECFC4100E27B46 /* FirebaseAppDistribution-Beta */; };
+		29CF55132BECFC4100E27B46 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55122BECFC4100E27B46 /* FirebaseAuth */; };
+		29CF55152BECFC4100E27B46 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55142BECFC4100E27B46 /* FirebaseAuthCombine-Community */; };
+		29CF55172BECFC4100E27B46 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55162BECFC4100E27B46 /* FirebaseCrashlytics */; };
+		29CF55192BECFC4100E27B46 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55182BECFC4100E27B46 /* FirebaseDatabase */; };
+		29CF551B2BECFC4100E27B46 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF551A2BECFC4100E27B46 /* FirebaseDatabaseSwift */; };
+		29CF551D2BECFC4100E27B46 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF551C2BECFC4100E27B46 /* FirebaseFirestore */; };
+		29CF551F2BECFC4100E27B46 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF551E2BECFC4100E27B46 /* FirebaseFirestoreCombine-Community */; };
+		29CF55212BECFC4100E27B46 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55202BECFC4100E27B46 /* FirebaseFirestoreSwift */; };
+		29CF55232BECFC4100E27B46 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55222BECFC4100E27B46 /* FirebaseStorage */; };
+		29CF55252BECFC4100E27B46 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55242BECFC4100E27B46 /* FirebaseStorageCombine-Community */; };
+		29CF55292BECFD4200E27B46 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 29CF55282BECFD4200E27B46 /* .gitignore */; };
 		29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88092B55256400126ADB /* AppDelegate.swift */; };
 		29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880B2B55256400126ADB /* SceneDelegate.swift */; };
 		29EA880E2B55256400126ADB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880D2B55256400126ADB /* MainViewController.swift */; };
@@ -22,7 +40,7 @@
 		29EA882D2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */; };
 		29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */; };
 		29EA883F2B554B8100126ADB /* DrugTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */; };
-		29EA88422B5555E300126ADB /* DrugItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88412B5555E300126ADB /* DrugItem.swift */; };
+		29EA88422B5555E300126ADB /* DrugItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88412B5555E300126ADB /* DrugItemDTO.swift */; };
 		29EA88442B55560C00126ADB /* DrugAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88432B55560C00126ADB /* DrugAPI.swift */; };
 		29EA88462B5557D600126ADB /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88452B5557D600126ADB /* APIParameter.swift */; };
 		29EA88482B56633400126ADB /* DrugInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88472B56633400126ADB /* DrugInfoViewController.swift */; };
@@ -57,6 +75,8 @@
 		29924B742BC158F8002B47F5 /* MyDrugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugViewController.swift; sourceTree = "<group>"; };
 		29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugCollectionViewCell.swift; sourceTree = "<group>"; };
 		29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDrugCollectionViewCell.xib; sourceTree = "<group>"; };
+		29CF55032BECFBF100E27B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		29CF55282BECFD4200E27B46 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		29EA88062B55256400126ADB /* Drug-Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drug-Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EA88092B55256400126ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29EA880B2B55256400126ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +92,7 @@
 		29EA882C2B55256500126ADB /* Drug_InfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug_InfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		29EA883C2B554B8100126ADB /* DrugTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugTableViewCell.swift; sourceTree = "<group>"; };
 		29EA883D2B554B8100126ADB /* DrugTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugTableViewCell.xib; sourceTree = "<group>"; };
-		29EA88412B5555E300126ADB /* DrugItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugItem.swift; sourceTree = "<group>"; };
+		29EA88412B5555E300126ADB /* DrugItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugItemDTO.swift; sourceTree = "<group>"; };
 		29EA88432B55560C00126ADB /* DrugAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugAPI.swift; sourceTree = "<group>"; };
 		29EA88452B5557D600126ADB /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 		29EA88472B56633400126ADB /* DrugInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInfoViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CF551B2BECFC4100E27B46 /* FirebaseDatabaseSwift in Frameworks */,
+				29CF551D2BECFC4100E27B46 /* FirebaseFirestore in Frameworks */,
+				29CF55112BECFC4100E27B46 /* FirebaseAppDistribution-Beta in Frameworks */,
+				29CF55152BECFC4100E27B46 /* FirebaseAuthCombine-Community in Frameworks */,
+				29CF550B2BECFC4100E27B46 /* FirebaseAnalyticsSwift in Frameworks */,
+				29CF55232BECFC4100E27B46 /* FirebaseStorage in Frameworks */,
+				29CF55252BECFC4100E27B46 /* FirebaseStorageCombine-Community in Frameworks */,
+				29CF55212BECFC4100E27B46 /* FirebaseFirestoreSwift in Frameworks */,
+				29CF550D2BECFC4100E27B46 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				29CF55072BECFC4100E27B46 /* FirebaseAnalytics in Frameworks */,
+				29CF55092BECFC4100E27B46 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				29CF550F2BECFC4100E27B46 /* FirebaseAppCheck in Frameworks */,
+				29CF55172BECFC4100E27B46 /* FirebaseCrashlytics in Frameworks */,
+				29CF55192BECFC4100E27B46 /* FirebaseDatabase in Frameworks */,
 				DD8AFD22D8C24AAA28C4D1F4 /* Pods_Drug_Info.framework in Frameworks */,
+				29CF55132BECFC4100E27B46 /* FirebaseAuth in Frameworks */,
+				29CF551F2BECFC4100E27B46 /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +152,7 @@
 		29EA87FD2B55256400126ADB = {
 			isa = PBXGroup;
 			children = (
+				29CF55282BECFD4200E27B46 /* .gitignore */,
 				294432BD2BDF675200AB1B1E /* Secrets.json */,
 				29EA88082B55256400126ADB /* Drug-Info */,
 				29EA881F2B55256500126ADB /* Drug-InfoTests */,
@@ -147,6 +184,7 @@
 				29EA880B2B55256400126ADB /* SceneDelegate.swift */,
 				29EA880F2B55256400126ADB /* Main.storyboard */,
 				29EA88142B55256500126ADB /* LaunchScreen.storyboard */,
+				29CF55032BECFBF100E27B46 /* GoogleService-Info.plist */,
 				29EA88122B55256500126ADB /* Assets.xcassets */,
 				29EA88172B55256500126ADB /* Info.plist */,
 			);
@@ -183,7 +221,7 @@
 		29EA883A2B554A6300126ADB /* api */ = {
 			isa = PBXGroup;
 			children = (
-				29EA88412B5555E300126ADB /* DrugItem.swift */,
+				29EA88412B5555E300126ADB /* DrugItemDTO.swift */,
 				29EA88432B55560C00126ADB /* DrugAPI.swift */,
 				29EA88452B5557D600126ADB /* APIParameter.swift */,
 			);
@@ -250,6 +288,24 @@
 			dependencies = (
 			);
 			name = "Drug-Info";
+			packageProductDependencies = (
+				29CF55062BECFC4100E27B46 /* FirebaseAnalytics */,
+				29CF55082BECFC4100E27B46 /* FirebaseAnalyticsOnDeviceConversion */,
+				29CF550A2BECFC4100E27B46 /* FirebaseAnalyticsSwift */,
+				29CF550C2BECFC4100E27B46 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				29CF550E2BECFC4100E27B46 /* FirebaseAppCheck */,
+				29CF55102BECFC4100E27B46 /* FirebaseAppDistribution-Beta */,
+				29CF55122BECFC4100E27B46 /* FirebaseAuth */,
+				29CF55142BECFC4100E27B46 /* FirebaseAuthCombine-Community */,
+				29CF55162BECFC4100E27B46 /* FirebaseCrashlytics */,
+				29CF55182BECFC4100E27B46 /* FirebaseDatabase */,
+				29CF551A2BECFC4100E27B46 /* FirebaseDatabaseSwift */,
+				29CF551C2BECFC4100E27B46 /* FirebaseFirestore */,
+				29CF551E2BECFC4100E27B46 /* FirebaseFirestoreCombine-Community */,
+				29CF55202BECFC4100E27B46 /* FirebaseFirestoreSwift */,
+				29CF55222BECFC4100E27B46 /* FirebaseStorage */,
+				29CF55242BECFC4100E27B46 /* FirebaseStorageCombine-Community */,
+			);
 			productName = "Drug-Info";
 			productReference = 29EA88062B55256400126ADB /* Drug-Info.app */;
 			productType = "com.apple.product-type.application";
@@ -325,6 +381,9 @@
 				Base,
 			);
 			mainGroup = 29EA87FD2B55256400126ADB;
+			packageReferences = (
+				29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 29EA88072B55256400126ADB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,12 +400,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CF55292BECFD4200E27B46 /* .gitignore in Resources */,
 				29EA88162B55256500126ADB /* LaunchScreen.storyboard in Resources */,
 				29924B792BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib in Resources */,
 				29EA88132B55256500126ADB /* Assets.xcassets in Resources */,
 				29EA88112B55256400126ADB /* Main.storyboard in Resources */,
 				294432BF2BDF675200AB1B1E /* Secrets.json in Resources */,
 				29EA883F2B554B8100126ADB /* DrugTableViewCell.xib in Resources */,
+				29CF55042BECFBF100E27B46 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +542,7 @@
 				29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */,
 				29EA88482B56633400126ADB /* DrugInfoViewController.swift in Sources */,
 				29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */,
-				29EA88422B5555E300126ADB /* DrugItem.swift in Sources */,
+				29EA88422B5555E300126ADB /* DrugItemDTO.swift in Sources */,
 				29924B782BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift in Sources */,
 				29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */,
 				29EA884B2B579C4300126ADB /* +UIImageView.swift in Sources */,
@@ -840,6 +901,100 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29CF55062BECFC4100E27B46 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		29CF55082BECFC4100E27B46 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		29CF550A2BECFC4100E27B46 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		29CF550C2BECFC4100E27B46 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		29CF550E2BECFC4100E27B46 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		29CF55102BECFC4100E27B46 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		29CF55122BECFC4100E27B46 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		29CF55142BECFC4100E27B46 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		29CF55162BECFC4100E27B46 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		29CF55182BECFC4100E27B46 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		29CF551A2BECFC4100E27B46 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		29CF551C2BECFC4100E27B46 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		29CF551E2BECFC4100E27B46 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		29CF55202BECFC4100E27B46 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		29CF55222BECFC4100E27B46 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		29CF55242BECFC4100E27B46 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CF55052BECFC4100E27B46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29EA87FE2B55256400126ADB /* Project object */;
 }
