@@ -28,7 +28,6 @@
 		29CF55212BECFC4100E27B46 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55202BECFC4100E27B46 /* FirebaseFirestoreSwift */; };
 		29CF55232BECFC4100E27B46 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55222BECFC4100E27B46 /* FirebaseStorage */; };
 		29CF55252BECFC4100E27B46 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 29CF55242BECFC4100E27B46 /* FirebaseStorageCombine-Community */; };
-		29CF55292BECFD4200E27B46 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 29CF55282BECFD4200E27B46 /* .gitignore */; };
 		29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA88092B55256400126ADB /* AppDelegate.swift */; };
 		29EA880C2B55256400126ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880B2B55256400126ADB /* SceneDelegate.swift */; };
 		29EA880E2B55256400126ADB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA880D2B55256400126ADB /* MainViewController.swift */; };
@@ -76,7 +75,6 @@
 		29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugCollectionViewCell.swift; sourceTree = "<group>"; };
 		29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDrugCollectionViewCell.xib; sourceTree = "<group>"; };
 		29CF55032BECFBF100E27B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		29CF55282BECFD4200E27B46 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		29EA88062B55256400126ADB /* Drug-Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drug-Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EA88092B55256400126ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29EA880B2B55256400126ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 		29EA87FD2B55256400126ADB = {
 			isa = PBXGroup;
 			children = (
-				29CF55282BECFD4200E27B46 /* .gitignore */,
 				294432BD2BDF675200AB1B1E /* Secrets.json */,
 				29EA88082B55256400126ADB /* Drug-Info */,
 				29EA881F2B55256500126ADB /* Drug-InfoTests */,
@@ -400,7 +397,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29CF55292BECFD4200E27B46 /* .gitignore in Resources */,
 				29EA88162B55256500126ADB /* LaunchScreen.storyboard in Resources */,
 				29924B792BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib in Resources */,
 				29EA88132B55256500126ADB /* Assets.xcassets in Resources */,
