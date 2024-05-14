@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nIK-9t-c7p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2xN-9G-eI5">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -305,6 +306,21 @@
             </objects>
             <point key="canvasLocation" x="1342.7480916030534" y="707.74647887323943"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="L26-he-YOW">
+            <objects>
+                <viewController id="3Y8-Hr-ilm" customClass="SignUpViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAr-Tv-b0g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="P3W-MM-lT4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Yj-7U-vHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="1065"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kpq-kY-zUe">
             <objects>
@@ -326,10 +342,93 @@
             </objects>
             <point key="canvasLocation" x="560" y="359"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="X3U-RX-Fue">
+            <objects>
+                <viewController id="2xN-9G-eI5" customClass="LoginViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F6F-zq-m0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-oa-xlm">
+                                <rect key="frame" x="30" y="682.66666666666663" width="333" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2VN-cO-E1Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="시작하기">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                    <color key="baseBackgroundColor" red="0.59607845540000004" green="0.85098040100000005" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uQq-Ex-1dJ">
+                                <rect key="frame" x="111.66666666666669" y="757.66666666666663" width="170" height="20.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv3-wC-wBy">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBu-HO-Y0g">
+                                        <rect key="frame" x="111" y="0.0" width="59" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="skyblue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_drug" translatesAutoresizingMaskIntoConstraints="NO" id="hlp-s1-OJS">
+                                <rect key="frame" x="121.66666666666669" y="263.66666666666669" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NRj-SN-vO5"/>
+                                    <constraint firstAttribute="width" constant="150" id="gy3-6O-IEi"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pri-jQ-vk4">
+                                <rect key="frame" x="30" y="569.66666666666663" width="333" height="93"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-uP-pp2">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frt-t4-cu3">
+                                        <rect key="frame" x="0.0" y="55" width="333" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bcY-la-DLi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bcY-la-DLi" firstAttribute="bottom" secondItem="uQq-Ex-1dJ" secondAttribute="bottom" constant="40" id="0Oh-b7-bDH"/>
+                            <constraint firstItem="ibY-oa-xlm" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="23y-12-oTs"/>
+                            <constraint firstItem="bcY-la-DLi" firstAttribute="trailing" secondItem="Pri-jQ-vk4" secondAttribute="trailing" constant="30" id="Een-OZ-lji"/>
+                            <constraint firstItem="uQq-Ex-1dJ" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="Kaq-Mz-Kk6"/>
+                            <constraint firstItem="Pri-jQ-vk4" firstAttribute="leading" secondItem="bcY-la-DLi" secondAttribute="leading" constant="30" id="Nud-Ot-crN"/>
+                            <constraint firstItem="hlp-s1-OJS" firstAttribute="centerY" secondItem="bcY-la-DLi" secondAttribute="centerY" constant="-100" id="O1L-oo-J9Z"/>
+                            <constraint firstItem="ibY-oa-xlm" firstAttribute="leading" secondItem="bcY-la-DLi" secondAttribute="leading" constant="30" id="QIN-7v-1Eb"/>
+                            <constraint firstItem="ibY-oa-xlm" firstAttribute="top" secondItem="Pri-jQ-vk4" secondAttribute="bottom" constant="20" id="ZXy-de-e1r"/>
+                            <constraint firstItem="hlp-s1-OJS" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="run-z4-xbk"/>
+                            <constraint firstItem="bcY-la-DLi" firstAttribute="trailing" secondItem="ibY-oa-xlm" secondAttribute="trailing" constant="30" id="v7L-4m-VqC"/>
+                            <constraint firstItem="uQq-Ex-1dJ" firstAttribute="top" secondItem="ibY-oa-xlm" secondAttribute="bottom" constant="20" id="zdp-7q-mIv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFs-sw-u8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184" y="358"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon_drug" width="21.333333969116211" height="21.333333969116211"/>
         <image name="medicine_cabinet" width="21.333333969116211" height="21.333333969116211"/>
+        <namedColor name="skyblue">
+            <color red="0.59607843137254901" green="0.85098039215686272" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
