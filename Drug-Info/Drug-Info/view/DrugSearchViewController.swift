@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class DrugSearchViewController: UIViewController {
 
     @IBOutlet weak var searchTextFiled: UITextField!
     @IBOutlet weak var btnSearch: UIButton!
@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 서비스 키 로드
-        let secrets = MainViewController.load("Secrets")
+        let secrets = DrugSearchViewController.load("Secrets")
         serviceKey = secrets["API_KEY"]
         
         btnSearch.layer.cornerRadius = 10
@@ -92,7 +92,7 @@ class MainViewController: UIViewController {
     
 }
 
-extension MainViewController : UITableViewDataSource, UITableViewDelegate{
+extension DrugSearchViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResult.count
@@ -139,7 +139,7 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
     
 }
 
-extension MainViewController {
+extension DrugSearchViewController {
     static func load(_ filename: String) -> [String: String] {
         let decoder = JSONDecoder()
         guard let url = Bundle.main.url(forResource: filename, withExtension: "json"),
