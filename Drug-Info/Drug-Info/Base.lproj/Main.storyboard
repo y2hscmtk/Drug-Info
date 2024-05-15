@@ -250,20 +250,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medicine_cabinet" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-fA-j0N">
-                                <rect key="frame" x="15" y="118" width="40" height="40"/>
+                                <rect key="frame" x="15" y="74" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="5Td-GH-x9H"/>
                                     <constraint firstAttribute="height" constant="40" id="nwL-5U-qrU"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 알약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-6I-bPF">
-                                <rect key="frame" x="60" y="118" width="103" height="40"/>
+                                <rect key="frame" x="60" y="74" width="103" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="0.58039218189999997" green="0.83137255909999996" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-Bl-AzK">
-                                <rect key="frame" x="15" y="168" width="363" height="591"/>
+                                <rect key="frame" x="15" y="124" width="363" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sqG-rF-bUt">
                                     <size key="itemSize" width="128" height="128"/>
@@ -358,6 +358,9 @@
                                     <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                     <color key="baseBackgroundColor" red="0.59607845540000004" green="0.85098040100000005" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="3Y8-Hr-ilm" eventType="touchUpInside" id="Gj6-Cz-xL9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P3W-MM-lT4"/>
@@ -383,6 +386,10 @@
                             <constraint firstItem="tB5-b7-g09" firstAttribute="leading" secondItem="Jt8-vk-HUW" secondAttribute="leading" id="yf8-yB-nAz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Jt8-vk-HUW" id="9Ps-tF-E9c"/>
+                        <outlet property="passwordTextField" destination="tB5-b7-g09" id="BKL-48-bxD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yj-7U-vHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,7 +398,7 @@
         <!--Main Tab Bar View Controller-->
         <scene sceneID="Kpq-kY-zUe">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nIK-9t-c7p" customClass="MainTabBarViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="nIK-9t-c7p" customClass="MainTabBarViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GY0-0j-p5b"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIj-5V-akd">
@@ -430,7 +437,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginBtnDidTapped:" destination="2xN-9G-eI5" eventType="touchUpInside" id="xGW-a1-Cjt"/>
-                                    <segue destination="nIK-9t-c7p" kind="show" id="Jae-3w-6lp"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uQq-Ex-1dJ">
