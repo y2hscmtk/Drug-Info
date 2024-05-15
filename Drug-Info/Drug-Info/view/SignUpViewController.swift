@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 // 회원가입
 class SignUpViewController: UIViewController {
@@ -67,10 +68,31 @@ class SignUpViewController: UIViewController {
                 }
                 return
             }
-            // 회원가입 성공
-            print("User signed up: \(authResult?.user.uid ?? "")")
-            // FireStorage에 회원 저장 과정 작성 필요(uid 저장 필요)
-            self.navigationController?.popViewController(animated: true)
+            // 회원가입 성공시 uid를 바탕으로 리얼타임 데이터베이스에 값 저장
+            if let uid = authResult?.user.uid {
+                self.saveUserInfo(uid: uid, email: email)
+            }
+        }
+    }
+    
+    
+    // 회원 가입 로직
+    private func saveUserInfo(uid: String, email: String) {
+        let ref = Database.database().reference()
+        let userReference = ref.child("users").child(uid) // 데이터베이스 참조
+        
+        // 사용자 이메일 저장
+        let values = ["email": email]
+        
+        userReference.setValue(values) { error, _ in
+            if let error = error {
+                print("Failed to save user info: \(error.localizedDescription)")
+                return
+            }
+            print("Successfully saved user info")
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
