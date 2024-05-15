@@ -10,6 +10,7 @@
 		294432BF2BDF675200AB1B1E /* Secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 294432BD2BDF675200AB1B1E /* Secrets.json */; };
 		297454B62BF1A91B00D299FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297454B52BF1A91B00D299FE /* LoginViewController.swift */; };
 		297454BA2BF1A99D00D299FE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297454B92BF1A99D00D299FE /* SignUpViewController.swift */; };
+		297454BC2BF3BC0B00D299FE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297454BB2BF3BC0B00D299FE /* MainTabBarViewController.swift */; };
 		29924B752BC158F8002B47F5 /* MyDrugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B742BC158F8002B47F5 /* MyDrugViewController.swift */; };
 		29924B782BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */; };
 		29924B792BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */; };
@@ -75,6 +76,7 @@
 		294432BE2BDF675200AB1B1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Secrets.json; sourceTree = "<group>"; };
 		297454B52BF1A91B00D299FE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		297454B92BF1A99D00D299FE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		297454BB2BF3BC0B00D299FE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		29924B742BC158F8002B47F5 /* MyDrugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugViewController.swift; sourceTree = "<group>"; };
 		29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugCollectionViewCell.swift; sourceTree = "<group>"; };
 		29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDrugCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				29924B742BC158F8002B47F5 /* MyDrugViewController.swift */,
 				297454B52BF1A91B00D299FE /* LoginViewController.swift */,
 				297454B92BF1A99D00D299FE /* SignUpViewController.swift */,
+				297454BB2BF3BC0B00D299FE /* MainTabBarViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				297454B62BF1A91B00D299FE /* LoginViewController.swift in Sources */,
 				29924B752BC158F8002B47F5 /* MyDrugViewController.swift in Sources */,
 				29EA88442B55560C00126ADB /* DrugAPI.swift in Sources */,
+				297454BC2BF3BC0B00D299FE /* MainTabBarViewController.swift in Sources */,
 				29EA880E2B55256400126ADB /* DrugSearchViewController.swift in Sources */,
 				29EA88462B5557D600126ADB /* APIParameter.swift in Sources */,
 				29EA880A2B55256400126ADB /* AppDelegate.swift in Sources */,

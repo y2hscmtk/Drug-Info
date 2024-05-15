@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2xN-9G-eI5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kyR-r4-kQ7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063.3587786259541" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="2990.0763358778627" y="0.70422535211267612"/>
         </scene>
         <!--Drug Info View Controller-->
         <scene sceneID="4fg-G4-fYZ">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJ6-iG-6qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2793" y="0.0"/>
+            <point key="canvasLocation" x="3718.320610687023" y="0.0"/>
         </scene>
         <!--알약 검색-->
         <scene sceneID="4RM-kC-34g">
@@ -239,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRc-3P-dKp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.2748091603053" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="2270.9923664122139" y="0.70422535211267612"/>
         </scene>
         <!--나의 알약-->
         <scene sceneID="vPe-HL-mgW">
@@ -250,20 +250,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medicine_cabinet" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-fA-j0N">
-                                <rect key="frame" x="15" y="74" width="40" height="40"/>
+                                <rect key="frame" x="15" y="118" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="5Td-GH-x9H"/>
                                     <constraint firstAttribute="height" constant="40" id="nwL-5U-qrU"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 알약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-6I-bPF">
-                                <rect key="frame" x="60" y="74" width="103" height="40"/>
+                                <rect key="frame" x="60" y="118" width="103" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="0.58039218189999997" green="0.83137255909999996" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-Bl-AzK">
-                                <rect key="frame" x="15" y="124" width="363" height="635"/>
+                                <rect key="frame" x="15" y="168" width="363" height="591"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sqG-rF-bUt">
                                     <size key="itemSize" width="128" height="128"/>
@@ -304,12 +304,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-bC-Lyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342.7480916030534" y="707.74647887323943"/>
+            <point key="canvasLocation" x="2269.4656488549617" y="707.04225352112678"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="L26-he-YOW">
             <objects>
-                <viewController id="3Y8-Hr-ilm" customClass="SignUpViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="3Y8-Hr-ilm" customClass="SignUpViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAr-Tv-b0g">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,13 +386,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yj-7U-vHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-185.49618320610685" y="1064.7887323943662"/>
+            <point key="canvasLocation" x="740" y="1038"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="Kpq-kY-zUe">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nIK-9t-c7p" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nIK-9t-c7p" customClass="MainTabBarViewController" customModule="Drug_Info" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="GY0-0j-p5b"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fIj-5V-akd">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -407,7 +408,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lm3-Q3-gVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="560" y="359"/>
+            <point key="canvasLocation" x="1486.2595419847328" y="358.45070422535213"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="X3U-RX-Fue">
@@ -427,6 +428,10 @@
                                     <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                     <color key="baseBackgroundColor" red="0.59607845540000004" green="0.85098040100000005" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginBtnDidTapped:" destination="2xN-9G-eI5" eventType="touchUpInside" id="xGW-a1-Cjt"/>
+                                    <segue destination="nIK-9t-c7p" kind="show" id="Jae-3w-6lp"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uQq-Ex-1dJ">
                                 <rect key="frame" x="111.66666666666669" y="757.66666666666663" width="170" height="20.333333333333371"/>
@@ -446,7 +451,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_drug" translatesAutoresizingMaskIntoConstraints="NO" id="hlp-s1-OJS">
-                                <rect key="frame" x="121.66666666666669" y="263.66666666666669" width="150" height="150"/>
+                                <rect key="frame" x="121.66666666666669" y="285.66666666666669" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="NRj-SN-vO5"/>
                                     <constraint firstAttribute="width" constant="150" id="gy3-6O-IEi"/>
@@ -484,10 +489,34 @@
                             <constraint firstItem="uQq-Ex-1dJ" firstAttribute="top" secondItem="ibY-oa-xlm" secondAttribute="bottom" constant="20" id="zdp-7q-mIv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="D24-VC-1fW"/>
+                    <connections>
+                        <outlet property="signInLabel" destination="NBu-HO-Y0g" id="Jq2-0a-Mtn"/>
+                        <outlet property="userIdTexField" destination="Hbd-uP-pp2" id="THE-5O-4S7"/>
+                        <outlet property="userPasswordTextField" destination="frt-t4-cu3" id="DHa-uh-xsF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFs-sw-u8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-184" y="358"/>
+            <point key="canvasLocation" x="741.22137404580144" y="357.74647887323948"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jwi-4N-xVR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kyR-r4-kQ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QmR-Sq-HQA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2xN-9G-eI5" kind="relationship" relationship="rootViewController" id="zgz-el-etc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LV2-th-yHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="358"/>
         </scene>
     </scenes>
     <resources>
