@@ -12,9 +12,13 @@ class MyDrugViewController: UIViewController {
     
     @IBOutlet weak var collectionview: UICollectionView!
     
+    var padding: CGFloat = 7
+    var totalPadding: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        totalPadding = padding * 2 // 좌우 패딩만 포함
         collectionview.dataSource = self
         collectionview.delegate = self
         // 사용할 셀 등록
@@ -39,6 +43,13 @@ extension MyDrugViewController: UICollectionViewDataSource,UICollectionViewDeleg
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyDrugCollectionViewCell", for: indexPath) as? MyDrugCollectionViewCell else {
             return UICollectionViewCell()
         }
+        // 이미지 크기 동적 조절
+        let cellWidth = (collectionView.frame.width - totalPadding) / 2
+        let imageSize = cellWidth - (padding * 2)
+        if let originalImage = cell.drugImageView.image {
+            cell.drugImageView.image = originalImage.resizedImage(newSize: CGSize(width: imageSize, height: imageSize))
+        }
+        
         return cell
     }
 
@@ -46,17 +57,30 @@ extension MyDrugViewController: UICollectionViewDataSource,UICollectionViewDeleg
 }
 
 extension MyDrugViewController: UICollectionViewDelegateFlowLayout {
-    // 셀의 크기 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        // 한 화면에 2개씩 보여주기
-        let width: CGFloat = (collectionView.frame.width / 2) - 7
-        
-        return CGSize(width: width, height: width)
+        // 셀의 크기 설정
+        let individualWidth = (collectionView.frame.width - totalPadding - padding) / 2
+        return CGSize(width: individualWidth, height: individualWidth)
     }
 
-    // 라인 간의 최소 간격 지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 14
+        return padding
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return padding
+    }
+
+}
+
+
+
+extension UIImage {
+    func resizedImage(newSize: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        self.draw(in: CGRect(origin: .zero, size: newSize))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage
     }
 }

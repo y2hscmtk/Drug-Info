@@ -4,56 +4,57 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyDrugCollectionViewCell" id="gTV-IL-0wX" customClass="MyDrugCollectionViewCell" customModule="Drug_Info" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="210" height="218"/>
+            <rect key="frame" x="0.0" y="0.0" width="226" height="223"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="210" height="218"/>
+                <rect key="frame" x="0.0" y="0.0" width="226" height="223"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bf-lm-zuX">
-                        <rect key="frame" x="0.0" y="0.0" width="210" height="218"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqG-my-xMz">
+                        <rect key="frame" x="0.0" y="0.0" width="226" height="223"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngj-FE-CHQ">
-                                <rect key="frame" x="10" y="8" width="190" height="198"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_drug" translatesAutoresizingMaskIntoConstraints="NO" id="5N3-HE-O5c">
+                                <rect key="frame" x="8" y="8" width="210" height="207"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.58039218189999997" green="0.83137255909999996" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="skyblue"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Ngj-FE-CHQ" secondAttribute="bottom" constant="5" id="ORR-ts-jDQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Ngj-FE-CHQ" secondAttribute="trailing" constant="5" id="QW3-1W-GUb"/>
-                            <constraint firstItem="Ngj-FE-CHQ" firstAttribute="leading" secondItem="6bf-lm-zuX" secondAttribute="leading" constant="5" id="SzF-8U-WBN"/>
-                            <constraint firstItem="Ngj-FE-CHQ" firstAttribute="top" secondItem="6bf-lm-zuX" secondAttribute="top" constant="5" id="bRJ-0Z-T58"/>
+                            <constraint firstAttribute="trailing" secondItem="5N3-HE-O5c" secondAttribute="trailing" constant="8" id="5sT-AR-CQa"/>
+                            <constraint firstItem="5N3-HE-O5c" firstAttribute="leading" secondItem="QqG-my-xMz" secondAttribute="leading" constant="8" id="82m-cz-ZmD"/>
+                            <constraint firstAttribute="bottom" secondItem="5N3-HE-O5c" secondAttribute="bottom" constant="8" id="phH-a2-d2C"/>
+                            <constraint firstItem="5N3-HE-O5c" firstAttribute="top" secondItem="QqG-my-xMz" secondAttribute="top" constant="8" id="zJ7-gc-I8I"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="6bf-lm-zuX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9b7-t0-Nl4"/>
-                <constraint firstAttribute="bottom" secondItem="6bf-lm-zuX" secondAttribute="bottom" id="FAw-Uf-MrN"/>
-                <constraint firstAttribute="trailing" secondItem="6bf-lm-zuX" secondAttribute="trailing" id="X83-7N-Mf2"/>
-                <constraint firstItem="6bf-lm-zuX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ltr-gJ-7ud"/>
+                <constraint firstItem="QqG-my-xMz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="J8z-tA-75b"/>
+                <constraint firstAttribute="bottom" secondItem="QqG-my-xMz" secondAttribute="bottom" id="NN9-hp-il2"/>
+                <constraint firstItem="QqG-my-xMz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b4N-qg-qVR"/>
+                <constraint firstAttribute="trailing" secondItem="QqG-my-xMz" secondAttribute="trailing" id="x2z-wE-Rzm"/>
             </constraints>
-            <size key="customSize" width="210" height="218"/>
+            <size key="customSize" width="226" height="223"/>
             <connections>
-                <outlet property="borderView" destination="6bf-lm-zuX" id="a3m-kU-4gv"/>
-                <outlet property="drugContentView" destination="Ngj-FE-CHQ" id="LZf-yx-BUC"/>
+                <outlet property="drugContentView" destination="QqG-my-xMz" id="0w7-dU-2qq"/>
+                <outlet property="drugImageView" destination="5N3-HE-O5c" id="fi0-c4-fBc"/>
             </connections>
-            <point key="canvasLocation" x="122.13740458015266" y="17.605633802816904"/>
+            <point key="canvasLocation" x="38.167938931297705" y="16.549295774647888"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="icon_drug" width="21.333333969116211" height="21.333333969116211"/>
+        <namedColor name="skyblue">
+            <color red="0.59607843137254901" green="0.85098039215686272" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

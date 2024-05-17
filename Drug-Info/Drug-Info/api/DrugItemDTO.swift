@@ -34,12 +34,6 @@ struct DrugItem: Decodable {
     var efcyQesitm : String? // 알약 효능 요약
     var useMethodQesitm : String? // 복용 방법
     var atpnWarnQesitm : String?
-    var atpnQesitm : String?
-    var intrcQesitm : String?
-    var seQesitm : String?
     var depositMethodQesitm : String? // 보관 방법
-    var openDe : String?
-    var updateDe : String?
     var itemImage : String? // 알약 이미지 링크
-    var bizrno : String?
 }

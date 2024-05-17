@@ -8,14 +8,15 @@
 import UIKit
 
 class MyDrugCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var borderView: UIView!
+    
     @IBOutlet weak var drugContentView: UIView!
+    @IBOutlet weak var drugImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        borderView.layer.cornerRadius = 15
-        drugContentView.layer.cornerRadius = 10
+        drugContentView.layer.cornerRadius = 17
+        drugImageView.layer.cornerRadius = 15
     }
 
 }
