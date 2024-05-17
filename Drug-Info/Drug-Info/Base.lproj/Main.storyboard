@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KEW-fj-9wa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kyR-r4-kQ7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -102,7 +102,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWQ-1w-4f6">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="900"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_drug" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-Cs-Iq1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drug_image_big" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-Cs-Iq1">
                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="7nA-Dd-5Cs"/>
@@ -304,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9C-bC-Lyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269.4656488549617" y="707.04225352112678"/>
+            <point key="canvasLocation" x="2271" y="790"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="L26-he-YOW">
@@ -445,22 +445,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-oa-xlm">
-                                <rect key="frame" x="30" y="682.66666666666663" width="333" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="2VN-cO-E1Y"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="시작하기">
-                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                    <color key="baseBackgroundColor" red="0.59607845540000004" green="0.85098040100000005" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="loginBtnDidTapped:" destination="2xN-9G-eI5" eventType="touchUpInside" id="xGW-a1-Cjt"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uQq-Ex-1dJ">
-                                <rect key="frame" x="111.66666666666669" y="757.66666666666663" width="170" height="20.333333333333371"/>
+                                <rect key="frame" x="111.66666666666669" y="762.66666666666663" width="170" height="20.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv3-wC-wBy">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="20.333333333333332"/>
@@ -476,47 +462,64 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_drug" translatesAutoresizingMaskIntoConstraints="NO" id="hlp-s1-OJS">
-                                <rect key="frame" x="121.66666666666669" y="285.66666666666669" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="NRj-SN-vO5"/>
-                                    <constraint firstAttribute="width" constant="150" id="gy3-6O-IEi"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drug_image_big" translatesAutoresizingMaskIntoConstraints="NO" id="hlp-s1-OJS">
+                                <rect key="frame" x="111.33333333333333" y="244" width="170.66666666666669" height="170.66666666666663"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pri-jQ-vk4">
-                                <rect key="frame" x="30" y="569.66666666666663" width="333" height="93"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ucB-Ok-bB7">
+                                <rect key="frame" x="30" y="559.66666666666663" width="333" height="188"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-uP-pp2">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="존재하지 않는 아이디입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBv-ud-mOo">
+                                        <rect key="frame" x="0.0" y="50" width="333" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frt-t4-cu3">
-                                        <rect key="frame" x="0.0" y="55" width="333" height="38"/>
+                                        <rect key="frame" x="0.0" y="74.333333333333371" width="333" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호가 올바르지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHa-Az-MEO">
+                                        <rect key="frame" x="0.0" y="122.33333333333336" width="333" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-oa-xlm">
+                                        <rect key="frame" x="0.0" y="146.66666666666674" width="333" height="41.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="시작하기">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                            <color key="baseBackgroundColor" red="0.59607845540000004" green="0.85098040100000005" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginBtnDidTapped:" destination="2xN-9G-eI5" eventType="touchUpInside" id="xGW-a1-Cjt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bcY-la-DLi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bcY-la-DLi" firstAttribute="bottom" secondItem="uQq-Ex-1dJ" secondAttribute="bottom" constant="40" id="0Oh-b7-bDH"/>
-                            <constraint firstItem="ibY-oa-xlm" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="23y-12-oTs"/>
-                            <constraint firstItem="bcY-la-DLi" firstAttribute="trailing" secondItem="Pri-jQ-vk4" secondAttribute="trailing" constant="30" id="Een-OZ-lji"/>
-                            <constraint firstItem="uQq-Ex-1dJ" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="Kaq-Mz-Kk6"/>
-                            <constraint firstItem="Pri-jQ-vk4" firstAttribute="leading" secondItem="bcY-la-DLi" secondAttribute="leading" constant="30" id="Nud-Ot-crN"/>
-                            <constraint firstItem="hlp-s1-OJS" firstAttribute="centerY" secondItem="bcY-la-DLi" secondAttribute="centerY" constant="-100" id="O1L-oo-J9Z"/>
-                            <constraint firstItem="ibY-oa-xlm" firstAttribute="leading" secondItem="bcY-la-DLi" secondAttribute="leading" constant="30" id="QIN-7v-1Eb"/>
-                            <constraint firstItem="ibY-oa-xlm" firstAttribute="top" secondItem="Pri-jQ-vk4" secondAttribute="bottom" constant="20" id="ZXy-de-e1r"/>
-                            <constraint firstItem="hlp-s1-OJS" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="run-z4-xbk"/>
-                            <constraint firstItem="bcY-la-DLi" firstAttribute="trailing" secondItem="ibY-oa-xlm" secondAttribute="trailing" constant="30" id="v7L-4m-VqC"/>
-                            <constraint firstItem="uQq-Ex-1dJ" firstAttribute="top" secondItem="ibY-oa-xlm" secondAttribute="bottom" constant="20" id="zdp-7q-mIv"/>
+                            <constraint firstItem="uQq-Ex-1dJ" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="C96-T2-n68"/>
+                            <constraint firstItem="uQq-Ex-1dJ" firstAttribute="top" secondItem="ucB-Ok-bB7" secondAttribute="bottom" constant="15" id="GBD-Kb-oTm"/>
+                            <constraint firstItem="bcY-la-DLi" firstAttribute="trailing" secondItem="ucB-Ok-bB7" secondAttribute="trailing" constant="30" id="PaH-CE-9Yj"/>
+                            <constraint firstItem="ucB-Ok-bB7" firstAttribute="leading" secondItem="bcY-la-DLi" secondAttribute="leading" constant="30" id="QmQ-Tl-oiC"/>
+                            <constraint firstItem="ucB-Ok-bB7" firstAttribute="top" secondItem="hlp-s1-OJS" secondAttribute="bottom" constant="145" id="fS6-U5-cnN"/>
+                            <constraint firstItem="bcY-la-DLi" firstAttribute="bottom" secondItem="uQq-Ex-1dJ" secondAttribute="bottom" constant="35" id="isM-Wv-jD6"/>
+                            <constraint firstItem="hlp-s1-OJS" firstAttribute="centerX" secondItem="bcY-la-DLi" secondAttribute="centerX" id="sJL-Qm-CMK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D24-VC-1fW"/>
                     <connections>
+                        <outlet property="emailErrorLabel" destination="RBv-ud-mOo" id="k92-ZP-t7j"/>
+                        <outlet property="passwordErrorLabel" destination="HHa-Az-MEO" id="phO-hK-fAV"/>
                         <outlet property="signInLabel" destination="NBu-HO-Y0g" id="Jq2-0a-Mtn"/>
                         <outlet property="userIdTexField" destination="Hbd-uP-pp2" id="THE-5O-4S7"/>
                         <outlet property="userPasswordTextField" destination="frt-t4-cu3" id="DHa-uh-xsF"/>
@@ -546,6 +549,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="drug_image_big" width="170.66667175292969" height="170.66667175292969"/>
         <image name="icon_drug" width="21.333333969116211" height="21.333333969116211"/>
         <image name="medicine_cabinet" width="21.333333969116211" height="21.333333969116211"/>
         <namedColor name="skyblue">
