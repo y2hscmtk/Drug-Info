@@ -43,9 +43,10 @@ https://github.com/y2hscmtk/Drug-Info/assets/109474668/966ab9b0-3880-478b-b15c-4
 ## 3. 알약 저장 / 저장한 알약 조회
 
 <p float="left">
-  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/8ba13a94-4766-4f7b-ae52-d229cf0f2474" width="200"/>
-  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/b4c472bb-e2e0-4b3b-8338-3b6fbe6c344b" width="200"/>
-  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/ae6c9a14-0eb3-46b5-bbbc-e9c64e28cac8" width="200"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/44d42deb-e780-4c22-98e8-28a129e9a61b" width="200"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/a74b180b-ff01-4d1b-9d0f-02182610c8ab" width="200"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/15c9ad9f-4d83-46ae-ab7d-546e201549a0" width="200"/>
+  <img src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/dd17644d-a9e1-4259-9784-14dd486278f2" width="200"/>
 </p>
 
 - 알약 저장
