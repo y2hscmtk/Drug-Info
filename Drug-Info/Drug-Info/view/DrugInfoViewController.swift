@@ -62,9 +62,7 @@ class DrugInfoViewController: UIViewController {
             if snapshot.exists() {
                 // 이미 저장된 알약이 존재하는 경우
                 print("Drug is already saved")
-                let alert = UIAlertController(title: "알림", message: "이미 저장된 알약입니다.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self.showAllert(title: "알림", message: "이미 저장된 알약입니다.")
             } else {
                 // 저장되지 않은 경우에만 저장 수행
                 let drugData: [String: Any] = [
@@ -80,13 +78,10 @@ class DrugInfoViewController: UIViewController {
 
                 userDrugRef.setValue(drugData) { error, _ in
                     if let error = error {
-                        print("Failed to save drug info: \(error.localizedDescription)")
+                        self.showAllert(title: "저장 실패", message: "오류가 발생하였습니다. \(error.localizedDescription)")
                         return
                     }
-                    print("Successfully saved drug info")
-                    let successAlert = UIAlertController(title: "저장 성공", message: "알약 정보가 성공적으로 저장되었습니다.", preferredStyle: .alert)
-                    successAlert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
-                    self.present(successAlert, animated: true, completion: nil)
+                    self.showAllert(title: "저장 완료", message: "'나의 알약'에 저장되었습니다.")
                 }
             }
         }
@@ -97,6 +92,15 @@ class DrugInfoViewController: UIViewController {
         let unsafeCharacters: Set<Character> = [".", "#", "$", "[", "]"]
         return string.reduce("") { result, character in
             return result + (unsafeCharacters.contains(character) ? "-" : String(character))
+        }
+    }
+    
+    // 알람띄우기
+    func showAllert(title : String, message : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 

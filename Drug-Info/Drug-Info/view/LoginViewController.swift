@@ -51,6 +51,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnDidTapped(_ sender: UIButton) {
+        // 이전에 표시한 경고 지우기
+        emailErrorLabel.isHidden = true
+        passwordErrorLabel.isHidden = true
         
         // 사용자가 입력한 아이디와 비밀번호가 파이어베이스에 실제로 존재하는지 확인
         guard let email = userIdTexField.text, !email.isEmpty else {
