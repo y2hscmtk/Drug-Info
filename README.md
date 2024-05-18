@@ -68,7 +68,8 @@ https://github.com/y2hscmtk/Drug-Info/assets/109474668/8fcd4129-0464-4739-b846-8
 API키는 Decode키를 등록해야 합니다.  
 <img width="516" alt="image" src="https://github.com/y2hscmtk/Drug-Info/assets/109474668/dffd8f26-95f1-4254-bf84-c255e1a82e28">
 
-> [!IMPORTANT] 파이어베이스 .plist 파일을 추가하지 않으면 어플리케이션이 정상 작동하지 않습니다.
+> [!IMPORTANT]
+> 파이어베이스 .plist 파일을 추가하지 않으면 어플리케이션이 정상 작동하지 않습니다.
 파이어베이스 콘솔을 생성하고 Authentication과 RealtimeDatabase를 활성화 시켜주세요.
 
 
