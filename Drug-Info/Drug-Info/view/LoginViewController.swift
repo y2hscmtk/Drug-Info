@@ -11,7 +11,6 @@ import FirebaseAuth
 // 시뮬레이터에서 로그인 테스트 문제 해결
 // https://kodean.tistory.com/25
 
-
 // 로그인
 class LoginViewController: UIViewController {
 
@@ -26,12 +25,29 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         signInLabel.isUserInteractionEnabled = true
+        emailErrorLabel.isHidden = true
+        passwordErrorLabel.isHidden = true
         
         let signInLabelTapGesture = UITapGestureRecognizer(target: self, action: #selector(signInLabelDidTapped))
         signInLabel.addGestureRecognizer(signInLabelTapGesture) // 이벤트 등록
         
-        emailErrorLabel.isHidden = true
-        passwordErrorLabel.isHidden = true
+        // dismiss 키보드 용
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+       
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func loginBtnDidTapped(_ sender: UIButton) {
@@ -69,6 +85,7 @@ class LoginViewController: UIViewController {
             // 로그인 성공
             print("User signed in: \(authResult?.user.uid ?? "")")
             // 존재한다면 로그인 허용 => 사용자 정보 UserDefault에 저장(사용자 이메일)후 화면 전환
+            UserDefaults.standard.set("uid",forKey: String((authResult?.user.uid)!))
             
             // 1. 스토리보드 찾기
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -90,6 +107,26 @@ class LoginViewController: UIViewController {
         signUpViewController.modalPresentationStyle = .fullScreen //전체 화면으로 변경
         // 3. 화면 이동
         navigationController?.pushViewController(signUpViewController, animated: true)
+    }
+    
+    @objc private func dismissKeyboard() {
+       view.endEditing(true)
+    }
+   
+    // 뷰 위로 올리기
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= (keyboardSize.height + 30)
+            }
+        }
+    }
+   
+    // 뷰 다시 아래로 내리기
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
 }
