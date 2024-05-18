@@ -30,6 +30,7 @@ class DrugAPI{
                     completion(true,searchResult!)
                 case .failure(let error):
                     self.log("searchDrug API 요청 실패 : \(error)")
+                    completion(false,[])
                 }
             }
     }

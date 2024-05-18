@@ -80,12 +80,16 @@ class DrugSearchViewController: UIViewController {
             DrugAPI.shared.searchDrug(parameter){ isSuccess, searchResult in
                 if isSuccess {
                     self.searchResult = searchResult
+                    self.activityIndicator.stopAnimating()
                 } else {
                     // 오류 처리 필요
+                    self.showAllert(title: "알림", message: "복용 효능으로 검색해주세요.\n 예) 두통, 복통")
+                    self.activityIndicator.stopAnimating()
                 }
-                self.activityIndicator.stopAnimating()
             }
         } else {
+            self.activityIndicator.startAnimating()
+            self.showAllert(title: "알림", message: "일치하는 알약이 없습니다.")
             print("내용이 비었습니다.")
         }
     }
@@ -148,5 +152,16 @@ extension DrugSearchViewController {
             fatalError("Failed to load \(filename) from bundle.")
         }
         return result
+    }
+}
+
+extension DrugSearchViewController {
+    // 알람띄우기
+    func showAllert(title : String, message : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
