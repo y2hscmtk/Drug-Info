@@ -27,10 +27,9 @@ class DrugInfoViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setValue() // 알약 정보 화면에 뿌리기
-        
     }
     
-    // 데이터 할당
+    // 알약 데이터 할당
     func setValue(){
         company.text = drug?.entpName ?? "제조사 정보가 없습니다"
         drugName.text = drug?.itemName
@@ -44,6 +43,7 @@ class DrugInfoViewController: UIViewController {
         }
     }
     
+    // 저장 버튼 클릭시
     @IBAction func saveBtnTapped(_ sender: UIBarButtonItem) {
         guard let drug = drug else { return }
         // 현재 로그인한 사용자 정보 확인
@@ -57,26 +57,39 @@ class DrugInfoViewController: UIViewController {
         // 알약 이름으로 데이터 저장
         let userDrugRef = ref.child("users").child(user.uid).child("drugs").child(safeDrugName)
 
-        let drugData: [String: Any] = [
-          "entpName": drug.entpName ?? "",
-          "itemName": drug.itemName ?? "",
-          "itemSeq": drug.itemSeq ?? "",
-          "efcyQesitm": drug.efcyQesitm ?? "",
-          "useMethodQesitm": drug.useMethodQesitm ?? "",
-          "atpnWarnQesitm": drug.atpnWarnQesitm ?? "",
-          "depositMethodQesitm": drug.depositMethodQesitm ?? "",
-          "itemImage": drug.itemImage ?? ""
-        ]
+        // 중복 확인
+        userDrugRef.observeSingleEvent(of: .value) { snapshot in
+            if snapshot.exists() {
+                // 이미 저장된 알약이 존재하는 경우
+                print("Drug is already saved")
+                let alert = UIAlertController(title: "알림", message: "이미 저장된 알약입니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                // 저장되지 않은 경우에만 저장 수행
+                let drugData: [String: Any] = [
+                    "entpName": drug.entpName ?? "",
+                    "itemName": drug.itemName ?? "",
+                    "itemSeq": drug.itemSeq ?? "",
+                    "efcyQesitm": drug.efcyQesitm ?? "",
+                    "useMethodQesitm": drug.useMethodQesitm ?? "",
+                    "atpnWarnQesitm": drug.atpnWarnQesitm ?? "",
+                    "depositMethodQesitm": drug.depositMethodQesitm ?? "",
+                    "itemImage": drug.itemImage ?? ""
+                ]
 
-        userDrugRef.setValue(drugData) { error, _ in
-            if let error = error {
-                print("Failed to save drug info: \(error.localizedDescription)")
-                return
+                userDrugRef.setValue(drugData) { error, _ in
+                    if let error = error {
+                        print("Failed to save drug info: \(error.localizedDescription)")
+                        return
+                    }
+                    print("Successfully saved drug info")
+                    let successAlert = UIAlertController(title: "저장 성공", message: "알약 정보가 성공적으로 저장되었습니다.", preferredStyle: .alert)
+                    successAlert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                    self.present(successAlert, animated: true, completion: nil)
+                }
             }
-            print("Successfully saved drug info")
-            // 저장 성공 다이얼로그 띄워주기 고민
         }
-        
     }
     
     // 파이어베이스 경로에는 .,#,$,[,] 이 들어갈 수 없음 => 존재한다면 -로 변경하는 함수 작성
