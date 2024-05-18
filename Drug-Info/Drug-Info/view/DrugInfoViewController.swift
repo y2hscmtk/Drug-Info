@@ -11,6 +11,8 @@ class DrugInfoViewController: UIViewController {
     
     var drug : DrugItem? // 전달 받은 알약 데이터
 
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var contentStackview: UIStackView!
     @IBOutlet weak var drugName: UILabel! // 알약 이름
     @IBOutlet weak var drugImageView: UIImageView! // 알약 이미지
     @IBOutlet weak var company: UILabel! // 제조사
@@ -22,7 +24,15 @@ class DrugInfoViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setValue() // 알약 정보 화면에 뿌리기
+        
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        // 스크롤뷰 높이 동적 변경
+//        let contentHeight = contentStackview.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+//        heightConstraint.constant = contentHeight
+//    }
     
     // 데이터 할당
     func setValue(){
@@ -37,9 +47,7 @@ class DrugInfoViewController: UIViewController {
             drugImageView.imageDownload(link: link)
         }
         
+//        view.setNeedsLayout()
+//        view.layoutIfNeeded()
     }
-    
-    
-    
-
 }
