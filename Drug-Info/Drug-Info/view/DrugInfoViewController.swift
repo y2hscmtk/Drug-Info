@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class DrugInfoViewController: UIViewController {
     
@@ -17,6 +19,9 @@ class DrugInfoViewController: UIViewController {
     @IBOutlet weak var efficient: UILabel! // 효능
     @IBOutlet weak var howToUse: UILabel! // 복용방법
     @IBOutlet weak var howToStore: UILabel! // 보관방법
+    
+    @IBOutlet weak var saveBtn: UIBarButtonItem! // 알약 저장용 버튼
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,4 +43,39 @@ class DrugInfoViewController: UIViewController {
             drugImageView.imageDownload(link: link)
         }
     }
+    
+    @IBAction func saveBtnTapped(_ sender: UIBarButtonItem) {
+        guard let drug = drug else { return }
+        // 현재 로그인한 사용자 정보 확인
+        guard let user = Auth.auth().currentUser else {
+            print("User not logged in")
+            return
+        }
+
+        let ref = Database.database().reference()
+        // 알약 이름으로 데이터 저장
+        let userDrugRef = ref.child("users").child(user.uid).child("drugs").child(drug.itemName ?? "UnknownDrug")
+
+        let drugData: [String: Any] = [
+          "entpName": drug.entpName ?? "",
+          "itemName": drug.itemName ?? "",
+          "itemSeq": drug.itemSeq ?? "",
+          "efcyQesitm": drug.efcyQesitm ?? "",
+          "useMethodQesitm": drug.useMethodQesitm ?? "",
+          "atpnWarnQesitm": drug.atpnWarnQesitm ?? "",
+          "depositMethodQesitm": drug.depositMethodQesitm ?? "",
+          "itemImage": drug.itemImage ?? ""
+        ]
+
+        userDrugRef.setValue(drugData) { error, _ in
+            if let error = error {
+                print("Failed to save drug info: \(error.localizedDescription)")
+                return
+            }
+            print("Successfully saved drug info")
+            // 저장 성공 다이얼로그 띄워주기 고민
+        }
+        
+    }
+    
 }

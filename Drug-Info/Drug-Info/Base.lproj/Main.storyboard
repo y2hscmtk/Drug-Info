@@ -82,6 +82,7 @@
                         <outlet property="btnSearch" destination="o4F-8i-MjK" id="Ou0-K5-fZD"/>
                         <outlet property="searchTextFiled" destination="IZA-yU-FmV" id="8TP-SY-QF2"/>
                         <outlet property="tableView" destination="nyw-0H-ppb" id="iC8-0a-0QI"/>
+                        <segue destination="bYh-6L-rBC" kind="show" id="pJG-M5-XGf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -422,7 +423,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-b5-Xef">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16O-yb-gw2">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="597.33333333333337"/>
@@ -474,7 +475,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zMp-bj-4yT">
-                                                                <rect key="frame" x="10" y="181.66666666666669" width="373" height="60.333333333333343"/>
+                                                                <rect key="frame" x="10" y="181.66666666666663" width="373" height="60.333333333333343"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복용방법" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmG-gG-i3r">
                                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
@@ -483,7 +484,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복용방법 대한 정보가 서버에 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhF-Wi-jxI">
-                                                                        <rect key="frame" x="0.0" y="39.999999999999943" width="373" height="20.333333333333329"/>
+                                                                        <rect key="frame" x="0.0" y="40" width="373" height="20.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -551,6 +552,13 @@
                             <constraint firstItem="j5l-b5-Xef" firstAttribute="trailing" secondItem="0XX-mg-uCb" secondAttribute="trailing" id="xOG-Of-hdv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qkI-SH-U6J">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="uTg-qU-1Dy">
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="bYh-6L-rBC" id="mb0-Q3-bF8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="company" destination="nSf-Jk-nzT" id="5AG-sF-CVe"/>
@@ -559,11 +567,12 @@
                         <outlet property="efficient" destination="R9r-3h-pxN" id="2cB-uv-cBC"/>
                         <outlet property="howToStore" destination="zbW-Se-hRv" id="tx1-tY-x6R"/>
                         <outlet property="howToUse" destination="BhF-Wi-jxI" id="Exq-YY-TXr"/>
+                        <outlet property="saveBtn" destination="uTg-qU-1Dy" id="pjE-16-btb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSn-Cc-QDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3697" y="1"/>
+            <point key="canvasLocation" x="3714" y="1"/>
         </scene>
     </scenes>
     <resources>

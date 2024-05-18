@@ -84,9 +84,6 @@ class LoginViewController: UIViewController {
             }
             // 로그인 성공
             print("User signed in: \(authResult?.user.uid ?? "")")
-            // 존재한다면 로그인 허용 => 사용자 정보 UserDefault에 저장(사용자 이메일)후 화면 전환
-            UserDefaults.standard.set("uid",forKey: String((authResult?.user.uid)!))
-            
             // 1. 스토리보드 찾기
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             // 2. 이동할 뷰 찾기 => 스토리보드의 identifier를 통해
