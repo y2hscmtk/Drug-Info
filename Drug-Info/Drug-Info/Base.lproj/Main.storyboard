@@ -554,7 +554,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="company" destination="nSf-Jk-nzT" id="5AG-sF-CVe"/>
-                        <outlet property="contentStackview" destination="5da-Pa-Tbm" id="ANM-is-G3g"/>
                         <outlet property="drugImageView" destination="LA6-aM-CnU" id="VmN-NC-RPc"/>
                         <outlet property="drugName" destination="1dU-qJ-qai" id="ODE-02-fMo"/>
                         <outlet property="efficient" destination="R9r-3h-pxN" id="2cB-uv-cBC"/>
