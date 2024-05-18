@@ -11,6 +11,7 @@
 		297454B62BF1A91B00D299FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297454B52BF1A91B00D299FE /* LoginViewController.swift */; };
 		297454BA2BF1A99D00D299FE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297454B92BF1A99D00D299FE /* SignUpViewController.swift */; };
 		297454BC2BF3BC0B00D299FE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297454BB2BF3BC0B00D299FE /* MainTabBarViewController.swift */; };
+		2987A7C62BF9016500820F3F /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2987A7C52BF9016500820F3F /* ToastMessage.swift */; };
 		29924B752BC158F8002B47F5 /* MyDrugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B742BC158F8002B47F5 /* MyDrugViewController.swift */; };
 		29924B782BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */; };
 		29924B792BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */; };
@@ -77,6 +78,7 @@
 		297454B52BF1A91B00D299FE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		297454B92BF1A99D00D299FE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		297454BB2BF3BC0B00D299FE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		2987A7C52BF9016500820F3F /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		29924B742BC158F8002B47F5 /* MyDrugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugViewController.swift; sourceTree = "<group>"; };
 		29924B762BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrugCollectionViewCell.swift; sourceTree = "<group>"; };
 		29924B772BC15EAC002B47F5 /* MyDrugCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDrugCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2987A7C42BF9015B00820F3F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				2987A7C52BF9016500820F3F /* ToastMessage.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		29EA87FD2B55256400126ADB = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		29EA88082B55256400126ADB /* Drug-Info */ = {
 			isa = PBXGroup;
 			children = (
+				2987A7C42BF9015B00820F3F /* util */,
 				29EA88492B579C3100126ADB /* extenstion */,
 				29EA883B2B554A6700126ADB /* cell */,
 				29EA883A2B554A6300126ADB /* api */,
@@ -553,6 +564,7 @@
 				29EA88422B5555E300126ADB /* DrugItemDTO.swift in Sources */,
 				29924B782BC15EAC002B47F5 /* MyDrugCollectionViewCell.swift in Sources */,
 				29EA883E2B554B8100126ADB /* DrugTableViewCell.swift in Sources */,
+				2987A7C62BF9016500820F3F /* ToastMessage.swift in Sources */,
 				29EA884B2B579C4300126ADB /* +UIImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

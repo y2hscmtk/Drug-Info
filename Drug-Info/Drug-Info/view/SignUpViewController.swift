@@ -71,6 +71,12 @@ class SignUpViewController: UIViewController {
             // 회원가입 성공시 uid를 바탕으로 리얼타임 데이터베이스에 값 저장
             if let uid = authResult?.user.uid {
                 self.saveUserInfo(uid: uid, email: email)
+                ToastMessage.shared.showToast(message: "가입이 완료되었습니다.", fontSize: 14.0, view: self.view)
+                
+                // 토스트 메시지를 확인할 시간을 주기 위함
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }
