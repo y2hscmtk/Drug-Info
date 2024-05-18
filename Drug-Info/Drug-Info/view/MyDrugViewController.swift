@@ -32,12 +32,15 @@ class MyDrugViewController: UIViewController {
         // 인디케이터 초기화 및 설정
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true // 인디케이터가 중지되면 자동으로 숨김
         self.view.addSubview(activityIndicator)
+        
+        
+        loadData() // 사용자 데이터 로드
     }
     
     // DidAppear 될 때마다 알약 정보 로드
     override func viewDidAppear(_ animated: Bool) {
-        activityIndicator.startAnimating() // 알약 데이터 로드하는 동안 인디케이터 띄우기
         loadData()
     }
     
@@ -54,6 +57,9 @@ class MyDrugViewController: UIViewController {
     
     // 파이어베이스에 접속하여 저장한 알약 데이터 얻어오기
     private func loadData() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating() // 인디케이터 시작
+        }
         guard let user = Auth.auth().currentUser else {
             print("User not logged in")
             return
@@ -89,10 +95,14 @@ class MyDrugViewController: UIViewController {
             // 메인 스레드에서 UI 업데이트
             DispatchQueue.main.async {
                 self.savedDrug = newSavedDrugs
-                self.collectionview.reloadData()
+                self.activityIndicator.stopAnimating() // 인디케이터 중지
+            }
+        } withCancel: { error in
+            print("Error fetching data: \(error.localizedDescription)")
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating() // 에러 발생시 인디케이터 중지
             }
         }
-        activityIndicator.stopAnimating() // 알약 정보 로드 완료하면 인디케이터 종료
     }
 
 }
