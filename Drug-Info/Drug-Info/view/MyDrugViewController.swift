@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class MyDrugViewController: UIViewController {
 
@@ -26,6 +28,12 @@ class MyDrugViewController: UIViewController {
         initCollectionView() // 컬렉션 뷰 초기 설정
     }
     
+    // DidAppear 될 때마다 알약 정보 로드
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
+    }
+    
+    
     private func initCollectionView(){
         totalPadding = padding * 2 // 좌우 패딩만 포함
         collectionview.dataSource = self
@@ -34,6 +42,48 @@ class MyDrugViewController: UIViewController {
         collectionview.register(
             UINib(nibName: "MyDrugCollectionViewCell", bundle: nil),
             forCellWithReuseIdentifier: "MyDrugCollectionViewCell")
+    }
+    
+    // 파이어베이스에 접속하여 저장한 알약 데이터 얻어오기
+    private func loadData() {
+        guard let user = Auth.auth().currentUser else {
+            print("User not logged in")
+            return
+        }
+        
+        let ref = Database.database().reference()
+        let userDrugsRef = ref.child("users").child(user.uid).child("drugs")
+        
+        // 사용자가 저장한 모든 알약 데이터를 로드
+        userDrugsRef.observeSingleEvent(of: .value) { snapshot in
+            var newSavedDrugs = [DrugItem]()
+            
+            // 스냅샷 내의 모든 데이터를 순회
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                   let drugData = childSnapshot.value as? [String: Any] {
+                    // DrugItem 객체 생성
+                    let drugItem = DrugItem(
+                        entpName: drugData["entpName"] as? String,
+                        itemName: drugData["itemName"] as? String,
+                        itemSeq: drugData["itemSeq"] as? String,
+                        efcyQesitm: drugData["efcyQesitm"] as? String,
+                        useMethodQesitm: drugData["useMethodQesitm"] as? String,
+                        atpnWarnQesitm: drugData["atpnWarnQesitm"] as? String,
+                        depositMethodQesitm: drugData["depositMethodQesitm"] as? String,
+                        itemImage: drugData["itemImage"] as? String
+                    )
+                    // 사용자가 저장한 알약 배열에 저장
+                    newSavedDrugs.append(drugItem)
+                }
+            }
+            
+            // 메인 스레드에서 UI 업데이트
+            DispatchQueue.main.async {
+                self.savedDrug = newSavedDrugs
+                self.collectionview.reloadData()
+            }
+        }
     }
 
 }
@@ -45,7 +95,7 @@ extension MyDrugViewController: UICollectionViewDataSource,UICollectionViewDeleg
     // 현재 사용자가 저장해둔 약의 개수만큼
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // return savedDrug.count
-        return 10
+        return savedDrug.count
     }
 
     // 보여줄 셀의 모습 정의

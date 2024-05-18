@@ -15,13 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Thread.sleep(forTimeInterval: 0.6) // 0.6초 동안 런치 스크린 띄우기
-        
-//        #if DEBUG
-//          let providerFactory = AppCheckDebugProviderFactory()
-//          AppCheck.setAppCheckProviderFactory(providerFactory)
-//
-//          FirebaseApp.configure()
-//        #endif
     
         FirebaseApp.configure()
         return true
