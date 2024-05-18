@@ -9,7 +9,7 @@ import Foundation
 struct APIParameter : Encodable{
     var ServiceKey : String?
     var pageNo : Int = 1
-    var numOfRows : Int = 10 // 얻어올 결과값 개수
+    var numOfRows : Int = 15 // 얻어올 결과값 개수
     var efcyQesitm : String
     let type = "json"
     init(ServiceKey : String, pageNo: Int = 1, numOfRows: Int = 10, efcyQesitm: String) {
