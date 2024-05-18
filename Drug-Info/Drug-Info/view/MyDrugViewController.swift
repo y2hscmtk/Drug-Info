@@ -110,6 +110,12 @@ extension MyDrugViewController: UICollectionViewDataSource,UICollectionViewDeleg
             cell.drugImageView.image = originalImage.resizedImage(newSize: CGSize(width: imageSize, height: imageSize))
         }
         
+        // 데이터 바인딩
+        let drug = savedDrug[indexPath.row]
+        // 이미지 정보 바인딩
+        if let link = drug.itemImage{
+            cell.drugImageView.imageDownload(link: link)
+        }
         return cell
     }
 
