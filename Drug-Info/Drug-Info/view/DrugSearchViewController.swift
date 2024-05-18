@@ -38,6 +38,12 @@ class DrugSearchViewController: UIViewController {
         activityIndicator.center = self.view.center
         self.view.addSubview(activityIndicator)
         
+        // 키보드 내리기
+        let keyboardTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        keyboardTapGesture.cancelsTouchesInView = false // 터치 이벤트를 추가하지 않도록 설정(테이블 뷰 이벤트와 겹치는것 방지)
+        view.addGestureRecognizer(keyboardTapGesture)
+        
+        
     }
     
     
@@ -92,6 +98,10 @@ class DrugSearchViewController: UIViewController {
             self.showAllert(title: "알림", message: "일치하는 알약이 없습니다.")
             print("내용이 비었습니다.")
         }
+    }
+    
+    @objc private func dismissKeyboard() {
+       view.endEditing(true)
     }
     
 }
