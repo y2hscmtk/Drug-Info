@@ -53,8 +53,9 @@ class DrugInfoViewController: UIViewController {
         }
 
         let ref = Database.database().reference()
+        let safeDrugName = safeDatabaseKey(drug.itemName ?? "UnknownDrug")
         // 알약 이름으로 데이터 저장
-        let userDrugRef = ref.child("users").child(user.uid).child("drugs").child(drug.itemName ?? "UnknownDrug")
+        let userDrugRef = ref.child("users").child(user.uid).child("drugs").child(safeDrugName)
 
         let drugData: [String: Any] = [
           "entpName": drug.entpName ?? "",
@@ -77,5 +78,14 @@ class DrugInfoViewController: UIViewController {
         }
         
     }
+    
+    // 파이어베이스 경로에는 .,#,$,[,] 이 들어갈 수 없음 => 존재한다면 -로 변경하는 함수 작성
+    func safeDatabaseKey(_ string: String) -> String {
+        let unsafeCharacters: Set<Character> = [".", "#", "$", "[", "]"]
+        return string.reduce("") { result, character in
+            return result + (unsafeCharacters.contains(character) ? "-" : String(character))
+        }
+    }
+
     
 }
