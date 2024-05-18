@@ -13,6 +13,8 @@ class MyDrugViewController: UIViewController {
 
     @IBOutlet weak var collectionview: UICollectionView!
     
+    var activityIndicator: UIActivityIndicatorView! // 
+    
     // 사용자가 저장한 알약 데이터
     var savedDrug : [DrugItem] = [] {
         didSet { // 변동발생시 컬렉션뷰 새로고침
@@ -26,10 +28,16 @@ class MyDrugViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initCollectionView() // 컬렉션 뷰 초기 설정
+        
+        // 인디케이터 초기화 및 설정
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = self.view.center
+        self.view.addSubview(activityIndicator)
     }
     
     // DidAppear 될 때마다 알약 정보 로드
     override func viewDidAppear(_ animated: Bool) {
+        activityIndicator.startAnimating() // 알약 데이터 로드하는 동안 인디케이터 띄우기
         loadData()
     }
     
@@ -84,6 +92,7 @@ class MyDrugViewController: UIViewController {
                 self.collectionview.reloadData()
             }
         }
+        activityIndicator.stopAnimating() // 알약 정보 로드 완료하면 인디케이터 종료
     }
 
 }
