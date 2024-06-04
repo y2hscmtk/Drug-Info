@@ -62,7 +62,20 @@ class DrugInfoViewController: UIViewController {
             if snapshot.exists() {
                 // 이미 저장된 알약이 존재하는 경우
                 print("Drug is already saved")
-                self.showAllert(title: "알림", message: "이미 저장된 알약입니다.")
+                self.showAllert(title: "알림", message: "이미 저장된 알약입니다!") {
+                    self.showDeleteConfirmationAlert(drugName: drug.itemName ?? "알약") { confirmed in
+                        if confirmed {
+                            // 사용자가 삭제를 선택한 경우
+                            userDrugRef.removeValue { error, _ in
+                                if let error = error {
+                                    self.showAllert(title: "삭제 실패", message: "오류가 발생하였습니다. \(error.localizedDescription)")
+                                    return
+                                }
+                                self.showAllert(title: "삭제 완료", message: "알약을 '나의 알약'에서 삭제 하였습니다.")
+                            }
+                        }
+                    }
+                }
             } else {
                 // 저장되지 않은 경우에만 저장 수행
                 let drugData: [String: Any] = [
@@ -95,11 +108,28 @@ class DrugInfoViewController: UIViewController {
         }
     }
     
-    // 알람띄우기
-    func showAllert(title : String, message : String){
+    
+    // 알람 띄우기
+    func showAllert(title: String, message: String, completion: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
+                completion?()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    // 삭제 알람 띄우기
+    func showDeleteConfirmationAlert(drugName: String, completion: @escaping (Bool) -> Void) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "알림", message: "\(drugName)을(를) 삭제하시겠습니까?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "삭제", style: .destructive, handler: { _ in
+                completion(true)
+            }))
+            alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { _ in
+                completion(false)
+            }))
             self.present(alert, animated: true, completion: nil)
         }
     }
